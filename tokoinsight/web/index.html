@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toko Insight</title>
+<style>
+:root {
+  color-scheme: light;
+  --surface-0: #f4f4f2; --surface-1: #fcfcfb; --border: #e2e1dc;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #7a7973;
+  --grid: #ecebe7; --series-1: #2a78d6; --series-2: #eb6834; --band: rgba(235,104,52,.14);
+  --good: #0a7d36; --good-bg: #e3f4e8; --warn: #9a6100; --warn-bg: #fdf0d5;
+  --crit: #b4232a; --crit-bg: #fbe4e3; --info: #2a5fa8; --info-bg: #e3edfa;
+  --code-bg: #f0efeb;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface-0: #111110; --surface-1: #1a1a19; --border: #2e2e2c;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+    --grid: #2a2a28; --series-1: #3987e5; --series-2: #d95926; --band: rgba(217,89,38,.2);
+    --good: #4cc27a; --good-bg: #16301f; --warn: #e3a83b; --warn-bg: #33270f;
+    --crit: #f07a7a; --crit-bg: #3a1a1a; --info: #7fb0f0; --info-bg: #182a42; --code-bg: #232321;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-0: #111110; --surface-1: #1a1a19; --border: #2e2e2c;
+  --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+  --grid: #2a2a28; --series-1: #3987e5; --series-2: #d95926; --band: rgba(217,89,38,.2);
+  --good: #4cc27a; --good-bg: #16301f; --warn: #e3a83b; --warn-bg: #33270f;
+  --crit: #f07a7a; --crit-bg: #3a1a1a; --info: #7fb0f0; --info-bg: #182a42; --code-bg: #232321;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface-0); color: var(--text-primary);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header { padding: 18px 16px 8px; max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; }
+header h1 { font-size: 20px; margin: 0; }
+header .sub { color: var(--text-secondary); }
+main { max-width: 1240px; margin: 0 auto; padding: 8px 16px 40px; display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr); }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; grid-column: span 12; min-width: 0; }
+.span-6 { grid-column: span 6; } .span-4 { grid-column: span 4; } .span-8 { grid-column: span 8; }
+@media (max-width: 900px) { .span-6, .span-4, .span-8 { grid-column: span 12; } }
+h2 { font-size: 15px; margin: 0 0 4px; } .hint { color: var(--text-muted); font-size: 12px; margin: 0 0 10px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.kpi .label { color: var(--text-secondary); font-size: 12px; } .kpi .value { font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.kpi .delta { font-size: 12px; color: var(--text-secondary); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 5px 6px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--text-secondary); font-weight: 600; font-size: 12px; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scroll { overflow-x: auto; }
+.bar { display: inline-block; height: 8px; border-radius: 0 4px 4px 0; background: var(--series-1); vertical-align: middle; margin-right: 6px; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.b-order { color: var(--crit); background: var(--crit-bg); } .b-peak { color: var(--warn); background: var(--warn-bg); }
+.b-reduce { color: var(--info); background: var(--info-bg); } .b-ok { color: var(--good); background: var(--good-bg); }
+.chart { position: relative; } svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--text-muted); font-size: 11px; }
+.tip { position: absolute; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border); border-radius: 6px;
+  padding: 6px 8px; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.12); white-space: nowrap; display: none; z-index: 2; }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--text-secondary); margin: 4px 0 6px; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 5px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }
+input, select, textarea, button { font: inherit; color: var(--text-primary); background: var(--surface-1); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; }
+button { cursor: pointer; background: var(--series-1); color: #fff; border-color: transparent; font-weight: 600; }
+button.ghost { background: transparent; color: var(--text-secondary); border-color: var(--border); font-weight: 400; }
+textarea { width: 100%; min-height: 64px; resize: vertical; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0 10px; }
+.chips button { font-size: 12px; padding: 3px 9px; }
+.answer { border-top: 1px solid var(--border); padding-top: 10px; margin-top: 10px; }
+.answer .q { color: var(--text-secondary); font-weight: 600; margin-bottom: 6px; }
+.md table { margin: 8px 0; width: auto; } .md p { margin: 6px 0; } .md ul { margin: 6px 0; padding-left: 20px; }
+details { margin-top: 8px; } summary { cursor: pointer; color: var(--text-secondary); font-size: 13px; }
+pre, code { background: var(--code-bg); border-radius: 4px; font: 12px/1.4 ui-monospace, Consolas, monospace; }
+pre { padding: 6px 8px; white-space: pre-wrap; word-break: break-word; margin: 4px 0; }
+.step { border-left: 3px solid var(--border); padding: 4px 0 4px 10px; margin: 8px 0; }
+.err { color: var(--crit); } .muted { color: var(--text-muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Toko Insight</h1>
+  <span class="sub" id="asof">Loading sales data...</span>
+</header>
+<main>
+  <section class="card"><div class="kpis" id="kpis"></div></section>
+
+  <section class="card span-8">
+    <h2>Monthly revenue</h2>
+    <p class="hint">All stores, Rupiah. Hover for values; the last month is marked when it is partial.</p>
+    <div class="chart" id="trend"></div>
+  </section>
+  <section class="card span-4">
+    <h2>Pareto (ABC)</h2>
+    <p class="hint">Last 12 months: how few products make most of the revenue.</p>
+    <div id="abc"></div>
+    <h2 style="margin-top:14px">Categories, year over year</h2>
+    <div id="cats"></div>
+  </section>
+
+  <section class="card span-6"><h2>Best sellers</h2><p class="hint">Last 12 months by revenue.</p><div class="scroll" id="top"></div></section>
+  <section class="card span-6"><h2>Least attractive</h2><p class="hint">Lowest revenue in the last 12 months.</p><div class="scroll" id="bottom"></div></section>
+
+  <section class="card span-6"><h2>Growing and declining</h2><p class="hint">Revenue, last 12 months vs the 12 before.</p><div class="scroll" id="growth"></div></section>
+  <section class="card span-6"><h2>Bought together</h2><p class="hint">Lift = how many times more often than chance two products share a receipt.</p><div class="scroll" id="pairs"></div></section>
+
+  <section class="card"><h2>Seasonal products</h2><p class="hint" id="season-hint"></p><div class="scroll" id="seasonal"></div></section>
+
+  <section class="card">
+    <h2>Forecast</h2>
+    <p class="hint">Units per month. Model chosen by a rolling-origin backtest; the band is the 80% range.</p>
+    <div class="row">
+      <input id="fc-product" list="product-list" placeholder="All products (or type a product)" style="min-width:260px">
+      <datalist id="product-list"></datalist>
+      <select id="fc-horizon"><option value="3">3 months</option><option value="6" selected>6 months</option><option value="12">12 months</option></select>
+      <button id="fc-run">Forecast</button>
+    </div>
+    <div class="legend"><span><i style="background:var(--series-1)"></i>Actual</span><span><i style="background:var(--series-2)"></i>Forecast</span><span><i style="background:var(--band);height:10px"></i>80% range</span></div>
+    <div class="chart" id="fc-chart"></div>
+    <div class="scroll" id="fc-info"></div>
+  </section>
+
+  <section class="card">
+    <h2>Restock plan</h2>
+    <p class="hint" id="restock-hint">Computing forecasts for every product...</p>
+    <div class="scroll" id="restock"></div>
+  </section>
+
+  <section class="card span-8">
+    <h2>Ask the data</h2>
+    <p class="hint">The agent answers with tool calls (analytics functions and read-only SQL). Every call and query is shown under the answer.</p>
+    <div class="chips" id="chips"></div>
+    <textarea id="question" placeholder="Tanya dalam Bahasa Indonesia atau English..."></textarea>
+    <div class="row" style="margin-top:8px"><button id="ask">Ask</button><button class="ghost" id="clear">Clear chat</button><span class="muted" id="ask-status"></span></div>
+    <div id="answers"></div>
+  </section>
+  <section class="card span-4">
+    <h2>Read-only SQL</h2>
+    <p class="hint">Same guard the agent uses: one SELECT, no writes, 200 rows max.</p>
+    <textarea id="sql">SELECT substr(date,1,4) AS year, ROUND(AVG(payment_method='qris')*100,1) AS qris_pct
+FROM transactions GROUP BY 1</textarea>
+    <div class="row" style="margin-top:8px"><button id="sql-run">Run</button></div>
+    <div class="scroll" id="sql-out"></div>
+  </section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const num = (v, d = 0) => v == null ? "" : Number(v).toLocaleString("id-ID", {maximumFractionDigits: d});
+const rp = (v) => v == null ? "" : "Rp " + (Math.abs(v) >= 1e9 ? num(v / 1e9, 2) + " M" : Math.abs(v) >= 1e6 ? num(v / 1e6, 1) + " jt" : num(v));
+const pct = (v) => v == null ? "n/a" : (v > 0 ? "+" : "") + num(v, 1) + "%";
+async function getJSON(url, opts) {
+  const res = await fetch(url, opts);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || res.statusText);
+  return data;
+}
+function table(rows, cols) {
+  if (!rows || !rows.length) return '<p class="muted">No rows.</p>';
+  return "<table><thead><tr>" + cols.map(c => `<th class="${c.num ? "num" : ""}">${esc(c.label)}</th>`).join("") + "</tr></thead><tbody>" +
+    rows.map(r => "<tr>" + cols.map(c => `<td class="${c.num ? "num" : ""}">${c.html ? c.html(r) : esc(c.fmt ? c.fmt(r[c.key], r) : r[c.key])}</td>`).join("") + "</tr>").join("") + "</tbody></table>";
+}
+
+/* ---------- line chart with hover (one y-axis) ---------- */
+function lineChart(el, points, opts = {}) {
+  // points: [{x: label, y, kind: "actual"|"forecast", lo, hi}]
+  const W = 860, H = 260, L = 64, R = 12, T = 10, B = 28;
+  const ys = points.flatMap(p => [p.y, p.hi ?? p.y]).filter(v => v != null);
+  const max = Math.max(...ys) * 1.08 || 1;
+  const x = (i) => L + (points.length === 1 ? 0 : i * (W - L - R) / (points.length - 1));
+  const y = (v) => T + (H - T - B) * (1 - v / max);
+  const ticks = 4, fmt = opts.fmt || ((v) => num(v));
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.label || "chart")}">`;
+  for (let i = 0; i <= ticks; i++) {
+    const v = max * i / ticks;
+    svg += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--grid)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${esc(fmt(v))}</text>`;
+  }
+  const step = Math.ceil(points.length / 12);
+  points.forEach((p, i) => { if (i % step === 0 || i === points.length - 1) svg += `<text x="${x(i)}" y="${H - 8}" text-anchor="middle">${esc(p.x)}</text>`; });
+  const band = points.map((p, i) => [i, p]).filter(([, p]) => p.lo != null);
+  if (band.length) {
+    svg += `<path fill="var(--band)" d="M${band.map(([i, p]) => `${x(i)},${y(p.hi)}`).join("L")}L${band.slice().reverse().map(([i, p]) => `${x(i)},${y(p.lo)}`).join("L")}Z"/>`;
+  }
+  const path = (kind) => {
+    const idx = points.map((p, i) => [i, p]).filter(([i, p]) => p.kind === kind || (kind === "forecast" && p.bridge));
+    return idx.length > 1 ? `<path fill="none" stroke="var(${kind === "forecast" ? "--series-2" : "--series-1"})" stroke-width="2" ${kind === "forecast" ? 'stroke-dasharray="6 4"' : ""} stroke-linejoin="round" d="M${idx.map(([i, p]) => `${x(i)},${y(p.y)}`).join("L")}"/>` : "";
+  };
+  svg += path("actual") + path("forecast");
+  svg += `<line class="xh" x1="0" x2="0" y1="${T}" y2="${H - B}" stroke="var(--text-muted)" stroke-dasharray="2 3" visibility="hidden"/>`;
+  svg += `<circle class="dot" r="4" fill="var(--surface-1)" stroke-width="2" visibility="hidden"/>`;
+  svg += `<rect x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent"/></svg><div class="tip"></div>`;
+  el.innerHTML = svg;
+  const s = el.querySelector("svg"), tip = el.querySelector(".tip"), xh = s.querySelector(".xh"), dot = s.querySelector(".dot");
+  s.addEventListener("mousemove", (e) => {
+    const box = s.getBoundingClientRect(), sx = (e.clientX - box.left) * W / box.width;
+    const i = Math.max(0, Math.min(points.length - 1, Math.round((sx - L) / ((W - L - R) / Math.max(points.length - 1, 1)))));
+    const p = points[i];
+    xh.setAttribute("x1", x(i)); xh.setAttribute("x2", x(i)); xh.setAttribute("visibility", "visible");
+    dot.setAttribute("cx", x(i)); dot.setAttribute("cy", y(p.y)); dot.setAttribute("visibility", "visible");
+    dot.setAttribute("stroke", `var(${p.kind === "forecast" ? "--series-2" : "--series-1"})`);
+    tip.innerHTML = `<b>${esc(p.x)}</b><br>${p.kind === "forecast" ? "Forecast" : "Actual"}: ${esc(fmt(p.y))}` +
+      (p.lo != null ? `<br><span class="muted">80%: ${esc(fmt(p.lo))} to ${esc(fmt(p.hi))}</span>` : "") + (p.note ? `<br><span class="muted">${esc(p.note)}</span>` : "");
+    tip.style.display = "block";
+    const left = x(i) * box.width / W;
+    tip.style.left = Math.min(left + 12, box.width - tip.offsetWidth) + "px"; tip.style.top = "8px";
+  });
+  s.addEventListener("mouseleave", () => { tip.style.display = "none"; xh.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); });
+}
+
+/* ---------- dashboard ---------- */
+async function loadDashboard() {
+  const d = await getJSON("/api/dashboard");
+  const o = d.overview;
+  $("asof").textContent = `Data until ${o.as_of} - ${o.stores.length} stores - source: ${o.source}`;
+  const k = [["Revenue, last 12 months", rp(o.current.revenue), o.change_pct.revenue], ["Gross margin", rp(o.current.margin), o.change_pct.margin],
+             ["Receipts", num(o.current.receipts), o.change_pct.receipts], ["Average receipt", rp(o.current.avg_receipt), o.change_pct.avg_receipt],
+             ["Units sold", num(o.current.units), o.change_pct.units]];
+  $("kpis").innerHTML = k.map(([l, v, c]) => `<div class="kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="delta">${pct(c)} vs previous 12 months</div></div>`).join("");
+  lineChart($("trend"), d.trend.series.map(s => ({x: s.period, y: s.value, kind: "actual", note: s.partial ? "partial month" : ""})), {fmt: rp, label: "Monthly revenue"});
+  $("abc").innerHTML = table(Object.entries(d.abc).map(([c, v]) => ({c, ...v})), [
+    {label: "Class", key: "c"}, {label: "Products", key: "products", num: 1}, {label: "% of products", key: "share_of_products_pct", num: 1, fmt: v => num(v, 1) + "%"},
+    {label: "% of revenue", key: "share_of_value_pct", num: 1, fmt: v => num(v, 1) + "%"}]);
+  const catRows = [...d.categories.fastest_growing].sort((a, b) => b.growth_pct - a.growth_pct);
+  $("cats").innerHTML = table(catRows, [{label: "Category", key: "category"}, {label: "Revenue", key: "current", num: 1, fmt: rp}, {label: "YoY", key: "growth_pct", num: 1, fmt: pct}]);
+  const maxTop = Math.max(...d.top.rows.map(r => r.revenue));
+  const prodCols = (max) => [{label: "Product", key: "product"}, {label: "Category", key: "category"},
+    {label: "Revenue", num: 1, html: r => `<span class="bar" style="width:${Math.max(2, 70 * r.revenue / max)}px"></span>${esc(rp(r.revenue))}`},
+    {label: "Units", key: "qty", num: 1, fmt: v => num(v)}, {label: "Share", key: "share_pct", num: 1, fmt: v => num(v, 1) + "%"}];
+  $("top").innerHTML = table(d.top.rows, prodCols(maxTop));
+  $("bottom").innerHTML = table(d.bottom.rows, [...prodCols(maxTop), {label: "Note", key: "note"}]);
+  const g = d.growth;
+  $("growth").innerHTML = table([...g.fastest_growing.slice(0, 5).map(r => ({...r, dir: "Growing"})), ...g.fastest_declining.slice(0, 5).map(r => ({...r, dir: "Declining"})),
+    ...g.new_or_stopped.map(r => ({...r, dir: "New / stopped"}))],
+    [{label: "", key: "dir"}, {label: "Product", key: "product"}, {label: "Last 12m", key: "current", num: 1, fmt: rp}, {label: "Previous", key: "previous", num: 1, fmt: rp},
+     {label: "Change", num: 1, html: r => esc(r.status || pct(r.growth_pct))}]);
+  $("pairs").innerHTML = table(d.pairs.pairs, [{label: "Product A", key: "product_a"}, {label: "Product B", key: "product_b"},
+    {label: "Receipts", key: "receipts_together", num: 1, fmt: v => num(v)}, {label: "A -> B", key: "confidence_a_to_b_pct", num: 1, fmt: v => v + "%"}, {label: "Lift", key: "lift", num: 1, fmt: v => num(v, 2)}]);
+  const ev = d.seasonality.upcoming_events.map(e => `${e.event} ${e.start}`).join(", ");
+  $("season-hint").textContent = `Index 2.0 = twice the normal daily sales in that season. Ramadan follows the real Lebaran date each year. Upcoming: ${ev}.`;
+  $("seasonal").innerHTML = table(d.seasonality.seasonal_products, [{label: "Product", key: "product"}, {label: "Peak season", key: "peak_label"},
+    {label: "Peak index", key: "peak_index", num: 1, fmt: v => num(v, 2) + "x"}, {label: "Next peak", key: "next_peak"},
+    {label: "Ramadan", num: 1, html: r => esc(num(r.indices.ramadan, 2))}, {label: "School", num: 1, html: r => esc(num(r.indices.school, 2))},
+    {label: "Year end", num: 1, html: r => esc(num(r.indices.year_end, 2))}, {label: "Rainy", num: 1, html: r => esc(num(r.indices.rainy, 2))},
+    {label: "Dry", num: 1, html: r => esc(num(r.indices.dry, 2))}]);
+  if (!d.agent) $("ask-status").textContent = "Chat disabled: set GEMINI_API_KEY in .env and restart.";
+}
+
+async function loadProducts() {
+  const p = await getJSON("/api/products");
+  $("product-list").innerHTML = p.products.map(r => `<option value="${esc(r.name)}">`).join("");
+}
+
+async function runForecast() {
+  const product = $("fc-product").value.trim(), horizon = $("fc-horizon").value;
+  $("fc-info").innerHTML = '<p class="muted">Backtesting models...</p>';
+  try {
+    const f = await getJSON(`/api/forecast?horizon=${horizon}` + (product ? `&product=${encodeURIComponent(product)}` : ""));
+    if (f.model === "none") { $("fc-chart").innerHTML = ""; $("fc-info").innerHTML = `<p>${esc(f.note)}</p>`; return; }
+    const hist = f.history_last_24_months.map(h => ({x: h.month, y: h.units, kind: "actual"}));
+    hist[hist.length - 1].bridge = true;
+    const fut = f.forecast.map(r => ({x: r.month, y: r.units, lo: r.low_80, hi: r.high_80, kind: "forecast", note: r.note}));
+    lineChart($("fc-chart"), [...hist, ...fut], {label: "Forecast for " + f.target});
+    const scores = Object.entries(f.backtest.scores || {}).map(([m, s]) => ({m, ...s, used: m === f.model ? "used" : ""}));
+    $("fc-info").innerHTML = `<p><b>${esc(f.target)}</b> - model: ${esc(f.model_selection || f.model)}</p>` +
+      (f.model_details && f.model_details.holiday_effects ? `<p class="muted">Lebaran effects learned from daily data: Ramadan x${esc(f.model_details.holiday_effects.ramadan)}, Lebaran week x${esc(f.model_details.holiday_effects.lebaran_week)}</p>` : "") +
+      table(scores, [{label: "Model", key: "m"}, {label: "Backtest WAPE", key: "wape_pct", num: 1, fmt: v => v + "%"}, {label: "MAPE", key: "mape_pct", num: 1, fmt: v => v + "%"}, {label: "", key: "used"}]) +
+      table(f.forecast, [{label: "Month", key: "month"}, {label: "Units", key: "units", num: 1, fmt: v => num(v)}, {label: "80% low", key: "low_80", num: 1, fmt: v => num(v)},
+        {label: "80% high", key: "high_80", num: 1, fmt: v => num(v)}, {label: "Note", key: "note"}]);
+  } catch (e) { $("fc-info").innerHTML = `<p class="err">${esc(e.message)}</p>`; }
+}
+
+const BADGE = {"order now": "b-order", "prepare for peak": "b-peak", "reduce / stop ordering": "b-reduce", "ok": "b-ok"};
+async function loadRestock() {
+  const r = await getJSON("/api/restock");
+  $("restock-hint").textContent = `As of ${r.as_of}, ${r.store}, service level ${r.service_level * 100}%. ${r.policy}. ` +
+    Object.entries(r.counts).map(([a, n]) => `${n} ${a}`).join(", ") + ".";
+  $("restock").innerHTML = table(r.rows, [{label: "Action", html: x => `<span class="badge ${BADGE[x.action] || ""}">${esc(x.action)}</span>`},
+    {label: "Product", key: "product"}, {label: "On hand", key: "on_hand", num: 1, fmt: v => num(v)}, {label: "Forecast 30d", key: "forecast_next_30d", num: 1, fmt: v => num(v)},
+    {label: "Days cover", key: "days_of_cover", num: 1, fmt: v => num(v, 1)}, {label: "Safety stock", key: "safety_stock", num: 1, fmt: v => num(v)},
+    {label: "Reorder point", key: "reorder_point", num: 1, fmt: v => num(v)}, {label: "Order", key: "suggested_order", num: 1, fmt: v => num(v)},
+    {label: "Why", html: x => esc((x.reasons || []).join("; "))}]);
+}
+
+/* ---------- chat ---------- */
+const EXAMPLES = ["Produk apa yang paling laris 12 bulan terakhir?", "Produk apa saja yang musiman saat Ramadan?",
+  "Kalau beli roti tawar, biasanya beli apa lagi?", "Forecast Sirup Melon 6 bulan ke depan", "Which items should I stock more and less next month?",
+  "How has the QRIS share changed per year?"];
+let history = [];
+function md(text) {
+  const lines = esc(text).split("\n"); let html = "", list = false, tbl = [];
+  const inline = (s) => s.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/`([^`]+)`/g, "<code>$1</code>");
+  const flushTable = () => {
+    if (!tbl.length) return;
+    const rows = tbl.filter(r => !/^\|[\s:|-]+\|$/.test(r)).map(r => r.replace(/^\||\|$/g, "").split("|").map(c => inline(c.trim())));
+    html += "<table>" + rows.map((r, i) => "<tr>" + r.map(c => i ? `<td>${c}</td>` : `<th>${c}</th>`).join("") + "</tr>").join("") + "</table>"; tbl = [];
+  };
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (line.startsWith("|")) { tbl.push(line); continue; } flushTable();
+    if (/^[-*] /.test(line)) { if (!list) { html += "<ul>"; list = true; } html += `<li>${inline(line.slice(2))}</li>`; continue; }
+    if (list) { html += "</ul>"; list = false; }
+    if (/^#{1,4} /.test(line)) html += `<p><b>${inline(line.replace(/^#+ /, ""))}</b></p>`;
+    else if (line) html += `<p>${inline(line)}</p>`;
+  }
+  flushTable(); if (list) html += "</ul>"; return html;
+}
+async function ask(question) {
+  if (!question) return;
+  $("ask").disabled = true; $("ask-status").textContent = "Thinking with tools...";
+  const box = document.createElement("div"); box.className = "answer";
+  box.innerHTML = `<div class="q">${esc(question)}</div><p class="muted">...</p>`; $("answers").prepend(box);
+  try {
+    const a = await getJSON("/api/ask", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({question, history})});
+    history.push([question, a.answer]);
+    const steps = a.steps.map((s, i) => `<div class="step"><b>${i + 1}. ${esc(s.name)}</b> <code>${esc(JSON.stringify(s.args))}</code> <span class="muted">${s.ms} ms</span>` +
+      (s.error ? `<div class="err">${esc(s.error)}</div>` : "") + s.sql.map(q => `<pre>${esc(q)}</pre>`).join("") + "</div>").join("");
+    box.innerHTML = `<div class="q">${esc(question)}</div><div class="md">${md(a.answer)}</div>` +
+      `<details><summary>${a.steps.length} tool calls - ${esc(a.model)} - ${a.seconds}s</summary>${steps || '<p class="muted">No tools used.</p>'}</details>`;
+    $("ask-status").textContent = "";
+  } catch (e) { box.innerHTML = `<div class="q">${esc(question)}</div><p class="err">${esc(e.message)}</p>`; $("ask-status").textContent = ""; }
+  $("ask").disabled = false;
+}
+$("chips").innerHTML = EXAMPLES.map(q => `<button class="ghost">${esc(q)}</button>`).join("");
+$("chips").querySelectorAll("button").forEach(b => b.onclick = () => { $("question").value = b.textContent; ask(b.textContent); });
+$("ask").onclick = () => ask($("question").value.trim());
+$("question").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) ask($("question").value.trim()); });
+$("clear").onclick = () => { history = []; $("answers").innerHTML = ""; };
+$("fc-run").onclick = runForecast;
+$("sql-run").onclick = async () => {
+  try {
+    const r = await getJSON("/api/sql", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({query: $("sql").value})});
+    $("sql-out").innerHTML = table(r.rows.map(row => Object.fromEntries(r.columns.map((c, i) => [c, row[i]]))), r.columns.map(c => ({label: c, key: c}))) + (r.note ? `<p class="muted">${esc(r.note)}</p>` : "");
+  } catch (e) { $("sql-out").innerHTML = `<p class="err">${esc(e.message)}</p>`; }
+};
+loadDashboard().catch(e => $("asof").textContent = "Error: " + e.message);
+loadProducts().catch(() => {});
+runForecast();
+loadRestock().catch(e => $("restock-hint").textContent = "Error: " + e.message);
+</script>
+</body>
+</html>

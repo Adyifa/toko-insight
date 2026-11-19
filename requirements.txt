@@ -1,0 +1,4 @@
+# Core: Python standard library (sqlite3, urllib, http.server) + numpy.
+numpy>=1.24
+# Optional: read .xlsx files directly (otherwise save the sheet as CSV)
+# openpyxl>=3.1
