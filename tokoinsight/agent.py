@@ -133,6 +133,12 @@ class Agent:
                     response["id"] = fc["id"]
                 responses.append({"functionResponse": response})
             contents.append({"role": "user", "parts": responses})
+        if not text:
+            # Out of steps (or an empty reply): ask once more, with no tools, to answer from what it has.
+            contents.append({"role": "user", "parts": [{"text": "Answer the question now, using only the tool "
+                                                                "results above. Do not call more tools."}]})
+            content = self.llm.generate(contents, system=self.system)
+            text = "".join(p.get("text", "") for p in content.get("parts", []) if not p.get("thought")).strip()
         usage = getattr(getattr(self.llm, "usage", None), "to_dict", lambda: {})()
         return AgentAnswer(question, text or "(no answer)", steps, getattr(self.llm, "name", "llm"),
                            time.perf_counter() - started, usage, stopped)

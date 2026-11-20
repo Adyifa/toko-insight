@@ -77,3 +77,9 @@ def test_compact_cuts_long_lists():
     big = {"rows": [{"a": "x" * 100} for _ in range(500)]}
     small = compact(big, max_chars=3000)
     assert len(small["rows"]) <= 21 and "more rows" in small["rows"][-1]
+
+
+def test_empty_final_reply_gets_one_more_try(toolbox):
+    llm = FakeLLM([call("list_products"), call("list_products"), text(""), text("Selai Cokelat.")])
+    answer = Agent(llm, toolbox, max_steps=2).ask("q")
+    assert answer.text == "Selai Cokelat." and llm.requests[-1]["tools"] is None

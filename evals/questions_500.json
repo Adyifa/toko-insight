@@ -1,0 +1,4636 @@
+[
+ {
+  "template": "peak_season",
+  "lang": "id",
+  "question": "Kapan musim puncak penjualan Es Krim Cup?",
+  "kind": "keywords",
+  "expected": [
+   "kemarau",
+   "dry"
+  ],
+  "season": "dry",
+  "id": "g001"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "id",
+  "question": "Berapa persen struk di cabang Bogor yang dibayar dengan QRIS pada tahun 2023?",
+  "kind": "number",
+  "expected": 13.6,
+  "abs_tol": 0.6,
+  "id": "g002"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Rumah Tangga, produk apa yang omzetnya paling besar pada tahun 2025?",
+  "kind": "name",
+  "expected": [
+   "Deterjen Bubuk 800g"
+  ],
+  "id": "g003"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "id",
+  "question": "Berapa persen struk di cabang Depok yang dibayar dengan QRIS pada tahun 2026?",
+  "kind": "number",
+  "expected": 47.8,
+  "abs_tol": 0.6,
+  "id": "g004"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bekasi pada Januari 2023?",
+  "kind": "number",
+  "expected": 1675,
+  "rel": 0.005,
+  "id": "g005"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Minuman Soda 1.5L?",
+  "kind": "keywords",
+  "expected": [
+   "akhir tahun",
+   "year end",
+   "year-end",
+   "Natal",
+   "Christmas",
+   "Tahun Baru",
+   "New Year",
+   "Desember",
+   "December"
+  ],
+  "season": "year_end",
+  "id": "g006"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Kacang Kulit 250g pada bulan Juli 2023?",
+  "kind": "number",
+  "expected": 1600000,
+  "rel": 0.02,
+  "id": "g007"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in November 2024?",
+  "kind": "number",
+  "expected": 1664,
+  "rel": 0.005,
+  "id": "g008"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Roti & Sarapan pada November 2025?",
+  "kind": "number",
+  "expected": 501,
+  "rel": 0.01,
+  "id": "g009"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Popok Bayi M 20s yang dimulai tanggal 2025-01-21?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g010"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "id",
+  "question": "Berapa persen struk di cabang Depok yang dibayar dengan QRIS pada tahun 2025?",
+  "kind": "number",
+  "expected": 37.2,
+  "abs_tol": 0.6,
+  "id": "g011"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Alat Tulis pada tahun 2025 dibanding 2024?",
+  "kind": "number",
+  "expected": 5.7,
+  "abs_tol": 0.6,
+  "id": "g012"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Tisu Basah 50s yang dimulai tanggal 2024-02-03?",
+  "kind": "number",
+  "expected": 10,
+  "abs_tol": 0.5,
+  "id": "g013"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in May 2026?",
+  "kind": "number",
+  "expected": 1703,
+  "rel": 0.005,
+  "id": "g014"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Biskuit Kaleng Assorted in February 2024?",
+  "kind": "number",
+  "expected": 2095600,
+  "rel": 0.02,
+  "id": "g015"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Bayi pada tahun 2024 dibanding 2023?",
+  "kind": "number",
+  "expected": -0.4,
+  "abs_tol": 0.6,
+  "id": "g016"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Wafer Stik Keju pada bulan Juni 2024?",
+  "kind": "number",
+  "expected": 1438200,
+  "rel": 0.02,
+  "id": "g017"
+ },
+ {
+  "template": "peak_season",
+  "lang": "id",
+  "question": "Kapan musim puncak penjualan Pulpen Gel?",
+  "kind": "keywords",
+  "expected": [
+   "sekolah",
+   "school",
+   "ajaran baru",
+   "Juli",
+   "July"
+  ],
+  "season": "school",
+  "id": "g018"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Alat Tulis category, which product had the highest revenue in 2024?",
+  "kind": "name",
+  "expected": [
+   "Buku Tulis 38 Lembar (10)"
+  ],
+  "id": "g019"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in January 2026?",
+  "kind": "number",
+  "expected": 60803840,
+  "rel": 0.02,
+  "id": "g020"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Roti & Sarapan category, which product had the highest revenue in 2024?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g021"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Susu Kental Manis 370g in April 2024?",
+  "kind": "number",
+  "expected": 3915000,
+  "rel": 0.02,
+  "id": "g022"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Perawatan Diri category change in 2025 compared with 2024?",
+  "kind": "number",
+  "expected": 7.7,
+  "abs_tol": 0.6,
+  "id": "g023"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Telur Ayam 1kg yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 7804,
+  "rel": 0.01,
+  "id": "g024"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2025, produk apa yang paling sering dibeli bersama Selai Cokelat dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g025"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in June 2025?",
+  "kind": "number",
+  "expected": 2461,
+  "rel": 0.005,
+  "id": "g026"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Cokelat Batang yang dimulai tanggal 2023-06-09?",
+  "kind": "number",
+  "expected": 20,
+  "abs_tol": 0.5,
+  "id": "g027"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Es Krim Cup?",
+  "kind": "keywords",
+  "expected": [
+   "kemarau",
+   "dry"
+  ],
+  "season": "dry",
+  "id": "g028"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Minuman category in August 2023?",
+  "kind": "number",
+  "expected": 6833,
+  "rel": 0.01,
+  "id": "g029"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in January 2023?",
+  "kind": "number",
+  "expected": 1675,
+  "rel": 0.005,
+  "id": "g030"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Telur Ayam 1kg yang dimulai tanggal 2024-03-31?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g031"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Wafer Cokelat untuk November 2026?",
+  "kind": "number",
+  "expected": 460,
+  "rel": 0.03,
+  "id": "g032"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Air Mineral 600ml pada bulan November 2025?",
+  "kind": "number",
+  "expected": 10896200,
+  "rel": 0.02,
+  "id": "g033"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "id",
+  "question": "Berapa persen struk di cabang Bekasi yang dibayar dengan QRIS pada tahun 2023?",
+  "kind": "number",
+  "expected": 13.7,
+  "abs_tol": 0.6,
+  "id": "g034"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "id",
+  "question": "Jam berapa cabang Bekasi paling ramai (struk terbanyak) sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g035"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Sembako, produk apa yang omzetnya paling besar pada tahun 2023?",
+  "kind": "name",
+  "expected": [
+   "Beras Premium 5kg"
+  ],
+  "id": "g036"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2023, which product was most often bought together with Telur Ayam 1kg on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Mi Instan Goreng"
+  ],
+  "id": "g037"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in March 2026?",
+  "kind": "number",
+  "expected": 55682,
+  "rel": 0.02,
+  "id": "g038"
+ },
+ {
+  "template": "lebaran_day_receipts",
+  "lang": "en",
+  "question": "How many receipts were there across all stores on the first day of Lebaran 2024?",
+  "kind": "number",
+  "expected": 56,
+  "rel": 0.005,
+  "id": "g039"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in June 2026?",
+  "kind": "number",
+  "expected": 2606,
+  "rel": 0.005,
+  "id": "g040"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada Mei 2025?",
+  "kind": "number",
+  "expected": 2346,
+  "rel": 0.005,
+  "id": "g041"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Bayi, produk apa yang omzetnya paling besar pada tahun 2024?",
+  "kind": "name",
+  "expected": [
+   "Popok Bayi M 20s"
+  ],
+  "id": "g042"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "id",
+  "question": "Berapa persen struk di cabang Bogor yang dibayar dengan QRIS pada tahun 2024?",
+  "kind": "number",
+  "expected": 25.6,
+  "abs_tol": 0.6,
+  "id": "g043"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Buku Tulis 38 Lembar (10) yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 590,
+  "rel": 0.01,
+  "id": "g044"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Gula Pasir 1kg yang terjual sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 7730,
+  "rel": 0.01,
+  "id": "g045"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in June 2024?",
+  "kind": "number",
+  "expected": 47249,
+  "rel": 0.02,
+  "id": "g046"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Roti & Sarapan, produk apa yang omzetnya paling besar pada tahun 2024?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g047"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Voucher Pulsa Fisik 10rb were sold in 2024?",
+  "kind": "number",
+  "expected": 1580,
+  "rel": 0.01,
+  "id": "g048"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bekasi pada April 2023?",
+  "kind": "number",
+  "expected": 1494,
+  "rel": 0.005,
+  "id": "g049"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Kacang Kulit 250g yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 1402,
+  "rel": 0.01,
+  "id": "g050"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Tisu Wajah 250s pada bulan Mei 2025?",
+  "kind": "number",
+  "expected": 2642500,
+  "rel": 0.02,
+  "id": "g051"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bekasi pada Juni 2025?",
+  "kind": "number",
+  "expected": 1729,
+  "rel": 0.005,
+  "id": "g052"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Tepung Terigu 1kg in November 2026?",
+  "kind": "number",
+  "expected": 168,
+  "rel": 0.03,
+  "id": "g053"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Rumah Tangga pada Juli 2023?",
+  "kind": "number",
+  "expected": 398,
+  "rel": 0.01,
+  "id": "g054"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2023, produk apa yang paling sering dibeli bersama Telur Ayam 1kg dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Mi Instan Goreng"
+  ],
+  "id": "g055"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "en",
+  "question": "At which hour of the day did the Bogor store have the most receipts in 2023?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g056"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in February 2024?",
+  "kind": "number",
+  "expected": 46645,
+  "rel": 0.02,
+  "id": "g057"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "id",
+  "question": "Jam berapa cabang Bogor paling ramai (struk terbanyak) sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g058"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Popok Bayi M 20s promo that started on 2024-10-26?",
+  "kind": "number",
+  "expected": 10,
+  "abs_tol": 0.5,
+  "id": "g059"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in December 2025?",
+  "kind": "number",
+  "expected": 127464600,
+  "rel": 0.02,
+  "id": "g060"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Keripik Kentang 68g pada bulan Februari 2024?",
+  "kind": "number",
+  "expected": 4765200,
+  "rel": 0.02,
+  "id": "g061"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Depok store were paid with QRIS in 2023?",
+  "kind": "number",
+  "expected": 14.3,
+  "abs_tol": 0.6,
+  "id": "g062"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Obat Masuk Angin Sachet yang terjual sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 5508,
+  "rel": 0.01,
+  "id": "g063"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Sikat Gigi yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 1424,
+  "rel": 0.01,
+  "id": "g064"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Tepung Terigu 1kg yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 2286,
+  "rel": 0.01,
+  "id": "g065"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada April 2024?",
+  "kind": "number",
+  "expected": 2120,
+  "rel": 0.005,
+  "id": "g066"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2025, which product was most often bought together with Selai Cokelat on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g067"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Perawatan Diri category, which product had the highest revenue in 2023?",
+  "kind": "name",
+  "expected": [
+   "Sabun Cair Refill 450ml"
+  ],
+  "id": "g068"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in January 2023?",
+  "kind": "number",
+  "expected": 1124,
+  "rel": 0.005,
+  "id": "g069"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in November 2025?",
+  "kind": "number",
+  "expected": 87120960,
+  "rel": 0.02,
+  "id": "g070"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Mi Instan Kuah Soto pada bulan Desember 2025?",
+  "kind": "number",
+  "expected": 10411200,
+  "rel": 0.02,
+  "id": "g071"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in February 2024?",
+  "kind": "number",
+  "expected": 104339780,
+  "rel": 0.02,
+  "id": "g072"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Makanan Ringan category, which product had the highest revenue in 2025?",
+  "kind": "name",
+  "expected": [
+   "Keripik Kentang 68g"
+  ],
+  "id": "g073"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Alat Tulis category, which product had the highest revenue in 2023?",
+  "kind": "name",
+  "expected": [
+   "Buku Tulis 38 Lembar (10)"
+  ],
+  "id": "g074"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Alat Tulis category in January 2023?",
+  "kind": "number",
+  "expected": 171,
+  "rel": 0.01,
+  "id": "g075"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Makanan Ringan category in November 2023?",
+  "kind": "number",
+  "expected": 1744,
+  "rel": 0.01,
+  "id": "g076"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Lampu LED 9W yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 222,
+  "rel": 0.01,
+  "id": "g077"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Obat Masuk Angin Sachet untuk November 2026?",
+  "kind": "number",
+  "expected": 683,
+  "rel": 0.03,
+  "id": "g078"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in August 2024?",
+  "kind": "number",
+  "expected": 1137,
+  "rel": 0.005,
+  "id": "g079"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Gula Pasir 1kg in November 2026?",
+  "kind": "number",
+  "expected": 672,
+  "rel": 0.03,
+  "id": "g080"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Lain-lain, produk apa yang omzetnya paling besar pada tahun 2025?",
+  "kind": "name",
+  "expected": [
+   "Voucher Pulsa Fisik 10rb"
+  ],
+  "id": "g081"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Maret 2025?",
+  "kind": "number",
+  "expected": 133016175,
+  "rel": 0.02,
+  "id": "g082"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "id",
+  "question": "Jam berapa cabang Bogor paling ramai (struk terbanyak) sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g083"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Minyak Goreng 2L untuk November 2026?",
+  "kind": "number",
+  "expected": 416,
+  "rel": 0.03,
+  "id": "g084"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Minuman category change in 2024 compared with 2023?",
+  "kind": "number",
+  "expected": 13.2,
+  "abs_tol": 0.6,
+  "id": "g085"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in July 2023?",
+  "kind": "number",
+  "expected": 109406100,
+  "rel": 0.02,
+  "id": "g086"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Sampo Sachet Renceng untuk November 2026?",
+  "kind": "number",
+  "expected": 336,
+  "rel": 0.03,
+  "id": "g087"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Sabun Cair Refill 450ml in November 2024?",
+  "kind": "number",
+  "expected": 5675000,
+  "rel": 0.02,
+  "id": "g088"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Lain-lain pada Maret 2024?",
+  "kind": "number",
+  "expected": 241,
+  "rel": 0.01,
+  "id": "g089"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2024, which product was most often bought together with Selai Cokelat on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g090"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Sirup Melon 460ml in November 2026?",
+  "kind": "number",
+  "expected": 102,
+  "rel": 0.03,
+  "id": "g091"
+ },
+ {
+  "template": "lebaran_day_receipts",
+  "lang": "en",
+  "question": "How many receipts were there across all stores on the first day of Lebaran 2023?",
+  "kind": "number",
+  "expected": 66,
+  "rel": 0.005,
+  "id": "g092"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Susu UHT Cokelat 200ml pada bulan Maret 2023?",
+  "kind": "number",
+  "expected": 6798000,
+  "rel": 0.02,
+  "id": "g093"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Bekasi store were paid with QRIS in 2025?",
+  "kind": "number",
+  "expected": 37.0,
+  "abs_tol": 0.6,
+  "id": "g094"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Teh Celup 25s in November 2026?",
+  "kind": "number",
+  "expected": 282,
+  "rel": 0.03,
+  "id": "g095"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Selai Cokelat yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 2081,
+  "rel": 0.01,
+  "id": "g096"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in July 2026?",
+  "kind": "number",
+  "expected": 63903810,
+  "rel": 0.02,
+  "id": "g097"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2025, which product was most often bought together with Kopi Sachet Renceng on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Gula Pasir 1kg"
+  ],
+  "id": "g098"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in July 2026?",
+  "kind": "number",
+  "expected": 53288,
+  "rel": 0.02,
+  "id": "g099"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Juli 2024?",
+  "kind": "number",
+  "expected": 116951500,
+  "rel": 0.02,
+  "id": "g100"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Voucher Pulsa Fisik 10rb pada bulan Januari 2025?",
+  "kind": "number",
+  "expected": 1249500,
+  "rel": 0.02,
+  "id": "g101"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2024, produk apa yang paling sering dibeli bersama Popok Bayi M 20s dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Tisu Basah 50s"
+  ],
+  "id": "g102"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in April 2025?",
+  "kind": "number",
+  "expected": 47856140,
+  "rel": 0.02,
+  "id": "g103"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bekasi pada Agustus 2026?",
+  "kind": "number",
+  "expected": 1827,
+  "rel": 0.005,
+  "id": "g104"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada November 2023?",
+  "kind": "number",
+  "expected": 45024,
+  "rel": 0.02,
+  "id": "g105"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in May 2026?",
+  "kind": "number",
+  "expected": 137250620,
+  "rel": 0.02,
+  "id": "g106"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Minuman Isotonik 500ml were sold in 2025?",
+  "kind": "number",
+  "expected": 8858,
+  "rel": 0.01,
+  "id": "g107"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Lain-lain, produk apa yang omzetnya paling besar pada tahun 2023?",
+  "kind": "name",
+  "expected": [
+   "Voucher Pulsa Fisik 10rb"
+  ],
+  "id": "g108"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Sampo Sachet Renceng yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 3797,
+  "rel": 0.01,
+  "id": "g109"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada Januari 2026?",
+  "kind": "number",
+  "expected": 2560,
+  "rel": 0.005,
+  "id": "g110"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Rumah Tangga, produk apa yang omzetnya paling besar pada tahun 2024?",
+  "kind": "name",
+  "expected": [
+   "Deterjen Bubuk 800g"
+  ],
+  "id": "g111"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "id",
+  "question": "Berapa persen struk di cabang Bogor yang dibayar dengan QRIS pada tahun 2026?",
+  "kind": "number",
+  "expected": 47.8,
+  "abs_tol": 0.6,
+  "id": "g112"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Rumah Tangga category in December 2025?",
+  "kind": "number",
+  "expected": 406,
+  "rel": 0.01,
+  "id": "g113"
+ },
+ {
+  "template": "lebaran_day_receipts",
+  "lang": "en",
+  "question": "How many receipts were there across all stores on the first day of Lebaran 2026?",
+  "kind": "number",
+  "expected": 63,
+  "rel": 0.005,
+  "id": "g114"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Rumah Tangga pada Mei 2025?",
+  "kind": "number",
+  "expected": 428,
+  "rel": 0.01,
+  "id": "g115"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Roti & Sarapan category change in 2025 compared with 2024?",
+  "kind": "number",
+  "expected": 6.5,
+  "abs_tol": 0.6,
+  "id": "g116"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Makanan Ringan category change in 2024 compared with 2023?",
+  "kind": "number",
+  "expected": 3.0,
+  "abs_tol": 0.6,
+  "id": "g117"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in October 2026?",
+  "kind": "number",
+  "expected": 62127380,
+  "rel": 0.02,
+  "id": "g118"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Minuman, produk apa yang omzetnya paling besar pada tahun 2024?",
+  "kind": "name",
+  "expected": [
+   "Air Mineral 600ml"
+  ],
+  "id": "g119"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Minuman Soda 1.5L pada bulan Januari 2025?",
+  "kind": "number",
+  "expected": 4839200,
+  "rel": 0.02,
+  "id": "g120"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Bayi category change in 2025 compared with 2024?",
+  "kind": "number",
+  "expected": 7.3,
+  "abs_tol": 0.6,
+  "id": "g121"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bekasi pada Maret 2025?",
+  "kind": "number",
+  "expected": 95102295,
+  "rel": 0.02,
+  "id": "g122"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Perawatan Diri, produk apa yang omzetnya paling besar pada tahun 2024?",
+  "kind": "name",
+  "expected": [
+   "Sabun Cair Refill 450ml"
+  ],
+  "id": "g123"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Tisu Basah 50s in November 2026?",
+  "kind": "number",
+  "expected": 176,
+  "rel": 0.03,
+  "id": "g124"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in November 2024?",
+  "kind": "number",
+  "expected": 47072,
+  "rel": 0.02,
+  "id": "g125"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Perawatan Diri pada tahun 2025 dibanding 2024?",
+  "kind": "number",
+  "expected": 7.7,
+  "abs_tol": 0.6,
+  "id": "g126"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in August 2026?",
+  "kind": "number",
+  "expected": 2638,
+  "rel": 0.005,
+  "id": "g127"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Roti & Sarapan pada tahun 2024 dibanding 2023?",
+  "kind": "number",
+  "expected": 3.2,
+  "abs_tol": 0.6,
+  "id": "g128"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "id",
+  "question": "Jam berapa cabang Depok paling ramai (struk terbanyak) sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g129"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Selai Cokelat were sold in 2023?",
+  "kind": "number",
+  "expected": 2081,
+  "rel": 0.01,
+  "id": "g130"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Susu UHT Cokelat 200ml in January 2025?",
+  "kind": "number",
+  "expected": 8339500,
+  "rel": 0.02,
+  "id": "g131"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Minuman category, which product had the highest revenue in 2024?",
+  "kind": "name",
+  "expected": [
+   "Air Mineral 600ml"
+  ],
+  "id": "g132"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bekasi pada Mei 2024?",
+  "kind": "number",
+  "expected": 76294490,
+  "rel": 0.02,
+  "id": "g133"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada November 2025?",
+  "kind": "number",
+  "expected": 50517,
+  "rel": 0.02,
+  "id": "g134"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Kopi Sachet Renceng yang dimulai tanggal 2025-05-03?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g135"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Minyak Goreng 2L pada bulan April 2026?",
+  "kind": "number",
+  "expected": 20026300,
+  "rel": 0.02,
+  "id": "g136"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Roti & Sarapan, produk apa yang omzetnya paling besar pada tahun 2025?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g137"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Bogor store were paid with QRIS in 2026?",
+  "kind": "number",
+  "expected": 47.8,
+  "abs_tol": 0.6,
+  "id": "g138"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Kesehatan pada Maret 2026?",
+  "kind": "number",
+  "expected": 329,
+  "rel": 0.01,
+  "id": "g139"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Kesehatan pada Agustus 2024?",
+  "kind": "number",
+  "expected": 338,
+  "rel": 0.01,
+  "id": "g140"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Bekasi store were paid with QRIS in 2026?",
+  "kind": "number",
+  "expected": 48.6,
+  "abs_tol": 0.6,
+  "id": "g141"
+ },
+ {
+  "template": "lebaran_day_receipts",
+  "lang": "id",
+  "question": "Berapa jumlah struk di semua cabang pada hari pertama Lebaran 2024?",
+  "kind": "number",
+  "expected": 56,
+  "rel": 0.005,
+  "id": "g142"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "id",
+  "question": "Berapa persen struk di cabang Depok yang dibayar dengan QRIS pada tahun 2024?",
+  "kind": "number",
+  "expected": 25.9,
+  "abs_tol": 0.6,
+  "id": "g143"
+ },
+ {
+  "template": "peak_season",
+  "lang": "id",
+  "question": "Kapan musim puncak penjualan Kurma 500g?",
+  "kind": "keywords",
+  "expected": [
+   "Ramadan",
+   "Ramadhan",
+   "Lebaran",
+   "Idul Fitri"
+  ],
+  "season": "ramadan",
+  "id": "g144"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Sembako category in March 2023?",
+  "kind": "number",
+  "expected": 10041,
+  "rel": 0.01,
+  "id": "g145"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Pulpen Gel yang terjual sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 1875,
+  "rel": 0.01,
+  "id": "g146"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Pasta Gigi 190g untuk November 2026?",
+  "kind": "number",
+  "expected": 209,
+  "rel": 0.03,
+  "id": "g147"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2024, which product was most often bought together with Telur Ayam 1kg on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Mi Instan Goreng"
+  ],
+  "id": "g148"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in February 2026?",
+  "kind": "number",
+  "expected": 2307,
+  "rel": 0.005,
+  "id": "g149"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in June 2023?",
+  "kind": "number",
+  "expected": 47769100,
+  "rel": 0.02,
+  "id": "g150"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Minuman Isotonik 500ml in November 2026?",
+  "kind": "number",
+  "expected": 623,
+  "rel": 0.03,
+  "id": "g151"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Depok store were paid with QRIS in 2026?",
+  "kind": "number",
+  "expected": 47.8,
+  "abs_tol": 0.6,
+  "id": "g152"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Cokelat Batang were sold in 2023?",
+  "kind": "number",
+  "expected": 2385,
+  "rel": 0.01,
+  "id": "g153"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Makanan Ringan category, which product had the highest revenue in 2024?",
+  "kind": "name",
+  "expected": [
+   "Keripik Kentang 68g"
+  ],
+  "id": "g154"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Lampu LED 9W in November 2026?",
+  "kind": "number",
+  "expected": 11,
+  "rel": 0.03,
+  "id": "g155"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Jas Hujan Plastik?",
+  "kind": "keywords",
+  "expected": [
+   "hujan",
+   "rainy",
+   "rain",
+   "penghujan"
+  ],
+  "season": "rainy",
+  "id": "g156"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in June 2023?",
+  "kind": "number",
+  "expected": 1072,
+  "rel": 0.005,
+  "id": "g157"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Lain-lain category, which product had the highest revenue in 2024?",
+  "kind": "name",
+  "expected": [
+   "Voucher Pulsa Fisik 10rb"
+  ],
+  "id": "g158"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in October 2025?",
+  "kind": "number",
+  "expected": 50724,
+  "rel": 0.02,
+  "id": "g159"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in December 2025?",
+  "kind": "number",
+  "expected": 2508,
+  "rel": 0.005,
+  "id": "g160"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in June 2024?",
+  "kind": "number",
+  "expected": 77639980,
+  "rel": 0.02,
+  "id": "g161"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Bayi, produk apa yang omzetnya paling besar pada tahun 2025?",
+  "kind": "name",
+  "expected": [
+   "Popok Bayi M 20s"
+  ],
+  "id": "g162"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada November 2025?",
+  "kind": "number",
+  "expected": 123237860,
+  "rel": 0.02,
+  "id": "g163"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Sampo Sachet Renceng in June 2024?",
+  "kind": "number",
+  "expected": 3350000,
+  "rel": 0.02,
+  "id": "g164"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Sikat Gigi promo that started on 2024-05-08?",
+  "kind": "number",
+  "expected": 10,
+  "abs_tol": 0.5,
+  "id": "g165"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Kesehatan category change in 2024 compared with 2023?",
+  "kind": "number",
+  "expected": 4.9,
+  "abs_tol": 0.6,
+  "id": "g166"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Cokelat Batang promo that started on 2026-07-01?",
+  "kind": "number",
+  "expected": 10,
+  "abs_tol": 0.5,
+  "id": "g167"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Sirup Melon 460ml?",
+  "kind": "keywords",
+  "expected": [
+   "Ramadan",
+   "Ramadhan",
+   "Lebaran",
+   "Idul Fitri"
+  ],
+  "season": "ramadan",
+  "id": "g168"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Beras Premium 5kg in January 2026?",
+  "kind": "number",
+  "expected": 32712100,
+  "rel": 0.02,
+  "id": "g169"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in May 2025?",
+  "kind": "number",
+  "expected": 51112,
+  "rel": 0.02,
+  "id": "g170"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Telur Ayam 1kg in May 2024?",
+  "kind": "number",
+  "expected": 20656800,
+  "rel": 0.02,
+  "id": "g171"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Tepung Terigu 1kg in February 2025?",
+  "kind": "number",
+  "expected": 2536800,
+  "rel": 0.02,
+  "id": "g172"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Buku Tulis 38 Lembar (10) yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 590,
+  "rel": 0.01,
+  "id": "g173"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Tisu Basah 50s pada bulan Agustus 2024?",
+  "kind": "number",
+  "expected": 1801200,
+  "rel": 0.02,
+  "id": "g174"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Susu Kental Manis 370g promo that started on 2023-12-05?",
+  "kind": "number",
+  "expected": 20,
+  "abs_tol": 0.5,
+  "id": "g175"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in August 2024?",
+  "kind": "number",
+  "expected": 1691,
+  "rel": 0.005,
+  "id": "g176"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada April 2023?",
+  "kind": "number",
+  "expected": 106420900,
+  "rel": 0.02,
+  "id": "g177"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Bayi, produk apa yang omzetnya paling besar pada tahun 2023?",
+  "kind": "name",
+  "expected": [
+   "Popok Bayi M 20s"
+  ],
+  "id": "g178"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Tepung Terigu 1kg pada bulan November 2023?",
+  "kind": "number",
+  "expected": 2338000,
+  "rel": 0.02,
+  "id": "g179"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in March 2026?",
+  "kind": "number",
+  "expected": 2327,
+  "rel": 0.005,
+  "id": "g180"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in July 2024?",
+  "kind": "number",
+  "expected": 54652700,
+  "rel": 0.02,
+  "id": "g181"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada Maret 2024?",
+  "kind": "number",
+  "expected": 2406,
+  "rel": 0.005,
+  "id": "g182"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Wafer Cokelat in March 2026?",
+  "kind": "number",
+  "expected": 3402000,
+  "rel": 0.02,
+  "id": "g183"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in September 2026?",
+  "kind": "number",
+  "expected": 1833,
+  "rel": 0.005,
+  "id": "g184"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Kurma 500g?",
+  "kind": "keywords",
+  "expected": [
+   "Ramadan",
+   "Ramadhan",
+   "Lebaran",
+   "Idul Fitri"
+  ],
+  "season": "ramadan",
+  "id": "g185"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in March 2023?",
+  "kind": "number",
+  "expected": 2347,
+  "rel": 0.005,
+  "id": "g186"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Sembako category change in 2024 compared with 2023?",
+  "kind": "number",
+  "expected": 4.1,
+  "abs_tol": 0.6,
+  "id": "g187"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Baterai AA (2) yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 297,
+  "rel": 0.01,
+  "id": "g188"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Kopi Sachet Renceng yang dimulai tanggal 2024-09-02?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g189"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Kesehatan category change in 2025 compared with 2024?",
+  "kind": "number",
+  "expected": 0.7,
+  "abs_tol": 0.6,
+  "id": "g190"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "en",
+  "question": "At which hour of the day did the Bogor store have the most receipts in 2025?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g191"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2023, which product was most often bought together with Sikat Gigi on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Pasta Gigi 190g"
+  ],
+  "id": "g192"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bekasi pada September 2024?",
+  "kind": "number",
+  "expected": 76373620,
+  "rel": 0.02,
+  "id": "g193"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Kacang Kulit 250g in November 2026?",
+  "kind": "number",
+  "expected": 95,
+  "rel": 0.03,
+  "id": "g194"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Rumah Tangga category in March 2023?",
+  "kind": "number",
+  "expected": 432,
+  "rel": 0.01,
+  "id": "g195"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Susu UHT Cokelat 200ml yang terjual sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 14590,
+  "rel": 0.01,
+  "id": "g196"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Pasta Gigi 190g yang dimulai tanggal 2025-05-12?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g197"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Deterjen Bubuk 800g were sold in 2024?",
+  "kind": "number",
+  "expected": 2663,
+  "rel": 0.01,
+  "id": "g198"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Buku Tulis 38 Lembar (10) pada bulan Maret 2026?",
+  "kind": "number",
+  "expected": 1024400,
+  "rel": 0.02,
+  "id": "g199"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Makanan Ringan pada tahun 2025 dibanding 2024?",
+  "kind": "number",
+  "expected": 12.2,
+  "abs_tol": 0.6,
+  "id": "g200"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Kecap Manis 520ml yang terjual sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 1777,
+  "rel": 0.01,
+  "id": "g201"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bogor pada Januari 2025?",
+  "kind": "number",
+  "expected": 1038,
+  "rel": 0.005,
+  "id": "g202"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Juni 2024?",
+  "kind": "number",
+  "expected": 112342090,
+  "rel": 0.02,
+  "id": "g203"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in February 2026?",
+  "kind": "number",
+  "expected": 89307080,
+  "rel": 0.02,
+  "id": "g204"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Sabun Batang in November 2026?",
+  "kind": "number",
+  "expected": 211,
+  "rel": 0.03,
+  "id": "g205"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in November 2025?",
+  "kind": "number",
+  "expected": 123237860,
+  "rel": 0.02,
+  "id": "g206"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bekasi pada Januari 2024?",
+  "kind": "number",
+  "expected": 1651,
+  "rel": 0.005,
+  "id": "g207"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in October 2026?",
+  "kind": "number",
+  "expected": 98132000,
+  "rel": 0.02,
+  "id": "g208"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada Juni 2026?",
+  "kind": "number",
+  "expected": 2606,
+  "rel": 0.005,
+  "id": "g209"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Maret 2023?",
+  "kind": "number",
+  "expected": 46857,
+  "rel": 0.02,
+  "id": "g210"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in February 2026?",
+  "kind": "number",
+  "expected": 54686,
+  "rel": 0.02,
+  "id": "g211"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Sabun Batang untuk November 2026?",
+  "kind": "number",
+  "expected": 211,
+  "rel": 0.03,
+  "id": "g212"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Juni 2025?",
+  "kind": "number",
+  "expected": 50122,
+  "rel": 0.02,
+  "id": "g213"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Perawatan Diri pada tahun 2024 dibanding 2023?",
+  "kind": "number",
+  "expected": 4.3,
+  "abs_tol": 0.6,
+  "id": "g214"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in May 2024?",
+  "kind": "number",
+  "expected": 47673,
+  "rel": 0.02,
+  "id": "g215"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Baterai AA (2) in November 2026?",
+  "kind": "number",
+  "expected": 25,
+  "rel": 0.03,
+  "id": "g216"
+ },
+ {
+  "template": "lebaran_day_receipts",
+  "lang": "id",
+  "question": "Berapa jumlah struk di semua cabang pada hari pertama Lebaran 2026?",
+  "kind": "number",
+  "expected": 63,
+  "rel": 0.005,
+  "id": "g217"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Keripik Kentang 68g promo that started on 2023-06-21?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g218"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Sabun Cair Refill 450ml promo that started on 2023-07-08?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g219"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Wafer Cokelat pada bulan Februari 2023?",
+  "kind": "number",
+  "expected": 3120000,
+  "rel": 0.02,
+  "id": "g220"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in April 2024?",
+  "kind": "number",
+  "expected": 888,
+  "rel": 0.005,
+  "id": "g221"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Wafer Stik Keju yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 1072,
+  "rel": 0.01,
+  "id": "g222"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Februari 2026?",
+  "kind": "number",
+  "expected": 54686,
+  "rel": 0.02,
+  "id": "g223"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Buku Tulis 38 Lembar (10)?",
+  "kind": "keywords",
+  "expected": [
+   "sekolah",
+   "school",
+   "ajaran baru",
+   "Juli",
+   "July"
+  ],
+  "season": "school",
+  "id": "g224"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Biskuit Kaleng Assorted were sold in 2025?",
+  "kind": "number",
+  "expected": 474,
+  "rel": 0.01,
+  "id": "g225"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in January 2024?",
+  "kind": "number",
+  "expected": 1651,
+  "rel": 0.005,
+  "id": "g226"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Mi Instan Kuah Soto untuk November 2026?",
+  "kind": "number",
+  "expected": 2808,
+  "rel": 0.03,
+  "id": "g227"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in January 2026?",
+  "kind": "number",
+  "expected": 1788,
+  "rel": 0.005,
+  "id": "g228"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Keripik Kentang 68g yang dimulai tanggal 2024-06-15?",
+  "kind": "number",
+  "expected": 10,
+  "abs_tol": 0.5,
+  "id": "g229"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Pasta Gigi 190g promo that started on 2025-05-12?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g230"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "en",
+  "question": "At which hour of the day did the Depok store have the most receipts in 2024?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g231"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Lain-lain category in March 2026?",
+  "kind": "number",
+  "expected": 122,
+  "rel": 0.01,
+  "id": "g232"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Lain-lain category, which product had the highest revenue in 2025?",
+  "kind": "name",
+  "expected": [
+   "Voucher Pulsa Fisik 10rb"
+  ],
+  "id": "g233"
+ },
+ {
+  "template": "peak_season",
+  "lang": "id",
+  "question": "Kapan musim puncak penjualan Payung Lipat?",
+  "kind": "keywords",
+  "expected": [
+   "hujan",
+   "rainy",
+   "rain",
+   "penghujan"
+  ],
+  "season": "rainy",
+  "id": "g234"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Kurma 500g yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 380,
+  "rel": 0.01,
+  "id": "g235"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Keripik Kentang 68g were sold in 2024?",
+  "kind": "number",
+  "expected": 5364,
+  "rel": 0.01,
+  "id": "g236"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Susu Kental Manis 370g in November 2025?",
+  "kind": "number",
+  "expected": 5541300,
+  "rel": 0.02,
+  "id": "g237"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Juni 2024?",
+  "kind": "number",
+  "expected": 47249,
+  "rel": 0.02,
+  "id": "g238"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Roti & Sarapan pada Mei 2023?",
+  "kind": "number",
+  "expected": 477,
+  "rel": 0.01,
+  "id": "g239"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Lain-lain category change in 2025 compared with 2024?",
+  "kind": "number",
+  "expected": -20.4,
+  "abs_tol": 0.6,
+  "id": "g240"
+ },
+ {
+  "template": "peak_season",
+  "lang": "id",
+  "question": "Kapan musim puncak penjualan Minuman Isotonik 500ml?",
+  "kind": "keywords",
+  "expected": [
+   "kemarau",
+   "dry"
+  ],
+  "season": "dry",
+  "id": "g241"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2024, produk apa yang paling sering dibeli bersama Telur Ayam 1kg dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Mi Instan Goreng"
+  ],
+  "id": "g242"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2025, which product was most often bought together with Sikat Gigi on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Pasta Gigi 190g"
+  ],
+  "id": "g243"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2023, produk apa yang paling sering dibeli bersama Kopi Sachet Renceng dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Gula Pasir 1kg"
+  ],
+  "id": "g244"
+ },
+ {
+  "template": "lebaran_day_receipts",
+  "lang": "en",
+  "question": "How many receipts were there across all stores on the first day of Lebaran 2025?",
+  "kind": "number",
+  "expected": 58,
+  "rel": 0.005,
+  "id": "g245"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Minuman Isotonik 500ml pada bulan November 2025?",
+  "kind": "number",
+  "expected": 5046300,
+  "rel": 0.02,
+  "id": "g246"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in July 2026?",
+  "kind": "number",
+  "expected": 1811,
+  "rel": 0.005,
+  "id": "g247"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Depok store were paid with QRIS in 2024?",
+  "kind": "number",
+  "expected": 25.9,
+  "abs_tol": 0.6,
+  "id": "g248"
+ },
+ {
+  "template": "lebaran_day_receipts",
+  "lang": "id",
+  "question": "Berapa jumlah struk di semua cabang pada hari pertama Lebaran 2025?",
+  "kind": "number",
+  "expected": 58,
+  "rel": 0.005,
+  "id": "g249"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Biskuit Kaleng Assorted?",
+  "kind": "keywords",
+  "expected": [
+   "Ramadan",
+   "Ramadhan",
+   "Lebaran",
+   "Idul Fitri"
+  ],
+  "season": "ramadan",
+  "id": "g250"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bogor pada Desember 2024?",
+  "kind": "number",
+  "expected": 1127,
+  "rel": 0.005,
+  "id": "g251"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Deterjen Bubuk 800g promo that started on 2025-07-23?",
+  "kind": "number",
+  "expected": 10,
+  "abs_tol": 0.5,
+  "id": "g252"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Sirup Melon 460ml yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 1472,
+  "rel": 0.01,
+  "id": "g253"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Lain-lain pada September 2023?",
+  "kind": "number",
+  "expected": 241,
+  "rel": 0.01,
+  "id": "g254"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Popok Bayi M 20s yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 1355,
+  "rel": 0.01,
+  "id": "g255"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Lain-lain pada Oktober 2024?",
+  "kind": "number",
+  "expected": 195,
+  "rel": 0.01,
+  "id": "g256"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Sembako category in January 2023?",
+  "kind": "number",
+  "expected": 10807,
+  "rel": 0.01,
+  "id": "g257"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Santan Kemasan 200ml untuk November 2026?",
+  "kind": "number",
+  "expected": 212,
+  "rel": 0.03,
+  "id": "g258"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Biskuit Kaleng Assorted in April 2024?",
+  "kind": "number",
+  "expected": 4664400,
+  "rel": 0.02,
+  "id": "g259"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Susu UHT Cokelat 200ml yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 13835,
+  "rel": 0.01,
+  "id": "g260"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Rumah Tangga pada tahun 2024 dibanding 2023?",
+  "kind": "number",
+  "expected": 6.1,
+  "abs_tol": 0.6,
+  "id": "g261"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Desember 2024?",
+  "kind": "number",
+  "expected": 48073,
+  "rel": 0.02,
+  "id": "g262"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bogor pada April 2026?",
+  "kind": "number",
+  "expected": 1028,
+  "rel": 0.005,
+  "id": "g263"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Rumah Tangga category change in 2025 compared with 2024?",
+  "kind": "number",
+  "expected": 2.5,
+  "abs_tol": 0.6,
+  "id": "g264"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Selai Cokelat untuk November 2026?",
+  "kind": "number",
+  "expected": 164,
+  "rel": 0.03,
+  "id": "g265"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Mei 2025?",
+  "kind": "number",
+  "expected": 51112,
+  "rel": 0.02,
+  "id": "g266"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Cokelat Batang untuk November 2026?",
+  "kind": "number",
+  "expected": 179,
+  "rel": 0.03,
+  "id": "g267"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Sirup Melon 460ml were sold in 2025?",
+  "kind": "number",
+  "expected": 1466,
+  "rel": 0.01,
+  "id": "g268"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in October 2025?",
+  "kind": "number",
+  "expected": 2317,
+  "rel": 0.005,
+  "id": "g269"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada April 2025?",
+  "kind": "number",
+  "expected": 2119,
+  "rel": 0.005,
+  "id": "g270"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Bayi pada Juni 2026?",
+  "kind": "number",
+  "expected": 272,
+  "rel": 0.01,
+  "id": "g271"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in March 2025?",
+  "kind": "number",
+  "expected": 1111,
+  "rel": 0.005,
+  "id": "g272"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Perawatan Diri pada Maret 2025?",
+  "kind": "number",
+  "expected": 1113,
+  "rel": 0.01,
+  "id": "g273"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in July 2026?",
+  "kind": "number",
+  "expected": 94375890,
+  "rel": 0.02,
+  "id": "g274"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in August 2026?",
+  "kind": "number",
+  "expected": 1228,
+  "rel": 0.005,
+  "id": "g275"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Mi Instan Goreng were sold in 2023?",
+  "kind": "number",
+  "expected": 51754,
+  "rel": 0.01,
+  "id": "g276"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Kurma 500g yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 406,
+  "rel": 0.01,
+  "id": "g277"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Susu UHT Cokelat 200ml promo that started on 2026-07-26?",
+  "kind": "number",
+  "expected": 20,
+  "abs_tol": 0.5,
+  "id": "g278"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada September 2025?",
+  "kind": "number",
+  "expected": 120973600,
+  "rel": 0.02,
+  "id": "g279"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Sampo Sachet Renceng pada bulan Maret 2024?",
+  "kind": "number",
+  "expected": 3937500,
+  "rel": 0.02,
+  "id": "g280"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Desember 2024?",
+  "kind": "number",
+  "expected": 123322490,
+  "rel": 0.02,
+  "id": "g281"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Sembako pada tahun 2025 dibanding 2024?",
+  "kind": "number",
+  "expected": 6.5,
+  "abs_tol": 0.6,
+  "id": "g282"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Es Krim Cup untuk November 2026?",
+  "kind": "number",
+  "expected": 356,
+  "rel": 0.03,
+  "id": "g283"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2023, produk apa yang paling sering dibeli bersama Popok Bayi M 20s dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Tisu Basah 50s"
+  ],
+  "id": "g284"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in October 2024?",
+  "kind": "number",
+  "expected": 80058940,
+  "rel": 0.02,
+  "id": "g285"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Santan Kemasan 200ml were sold in 2025?",
+  "kind": "number",
+  "expected": 2880,
+  "rel": 0.01,
+  "id": "g286"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in December 2024?",
+  "kind": "number",
+  "expected": 1127,
+  "rel": 0.005,
+  "id": "g287"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Sembako pada tahun 2024 dibanding 2023?",
+  "kind": "number",
+  "expected": 4.1,
+  "abs_tol": 0.6,
+  "id": "g288"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Es Krim Cup pada bulan April 2023?",
+  "kind": "number",
+  "expected": 2709000,
+  "rel": 0.02,
+  "id": "g289"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in April 2025?",
+  "kind": "number",
+  "expected": 107538170,
+  "rel": 0.02,
+  "id": "g290"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2024, produk apa yang paling sering dibeli bersama Selai Cokelat dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g291"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Baterai AA (2) in August 2026?",
+  "kind": "number",
+  "expected": 383800,
+  "rel": 0.02,
+  "id": "g292"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Agustus 2024?",
+  "kind": "number",
+  "expected": 47210,
+  "rel": 0.02,
+  "id": "g293"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Lain-lain category, which product had the highest revenue in 2023?",
+  "kind": "name",
+  "expected": [
+   "Voucher Pulsa Fisik 10rb"
+  ],
+  "id": "g294"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in January 2023?",
+  "kind": "number",
+  "expected": 50424800,
+  "rel": 0.02,
+  "id": "g295"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Kesehatan pada tahun 2025 dibanding 2024?",
+  "kind": "number",
+  "expected": 0.7,
+  "abs_tol": 0.6,
+  "id": "g296"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in March 2024?",
+  "kind": "number",
+  "expected": 50409,
+  "rel": 0.02,
+  "id": "g297"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in September 2024?",
+  "kind": "number",
+  "expected": 1063,
+  "rel": 0.005,
+  "id": "g298"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Minyak Goreng 2L pada bulan September 2024?",
+  "kind": "number",
+  "expected": 16827000,
+  "rel": 0.02,
+  "id": "g299"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Sembako category in June 2025?",
+  "kind": "number",
+  "expected": 9417,
+  "rel": 0.01,
+  "id": "g300"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Mi Instan Kuah Soto were sold in 2023?",
+  "kind": "number",
+  "expected": 30191,
+  "rel": 0.01,
+  "id": "g301"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Kacang Kulit 250g untuk November 2026?",
+  "kind": "number",
+  "expected": 95,
+  "rel": 0.03,
+  "id": "g302"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bogor pada Mei 2023?",
+  "kind": "number",
+  "expected": 45465200,
+  "rel": 0.02,
+  "id": "g303"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in January 2024?",
+  "kind": "number",
+  "expected": 46992,
+  "rel": 0.02,
+  "id": "g304"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Oktober 2023?",
+  "kind": "number",
+  "expected": 103480400,
+  "rel": 0.02,
+  "id": "g305"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Susu UHT Cokelat 200ml pada bulan Januari 2024?",
+  "kind": "number",
+  "expected": 7632200,
+  "rel": 0.02,
+  "id": "g306"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2023, which product was most often bought together with Kopi Sachet Renceng on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Gula Pasir 1kg"
+  ],
+  "id": "g307"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Obat Masuk Angin Sachet?",
+  "kind": "keywords",
+  "expected": [
+   "hujan",
+   "rainy",
+   "rain",
+   "penghujan"
+  ],
+  "season": "rainy",
+  "id": "g308"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Buku Tulis 38 Lembar (10) in November 2026?",
+  "kind": "number",
+  "expected": 44,
+  "rel": 0.03,
+  "id": "g309"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Tepung Terigu 1kg in July 2025?",
+  "kind": "number",
+  "expected": 2521700,
+  "rel": 0.02,
+  "id": "g310"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2025, produk apa yang paling sering dibeli bersama Popok Bayi M 20s dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Tisu Basah 50s"
+  ],
+  "id": "g311"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in August 2024?",
+  "kind": "number",
+  "expected": 54367300,
+  "rel": 0.02,
+  "id": "g312"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Mi Instan Goreng were sold in 2025?",
+  "kind": "number",
+  "expected": 53171,
+  "rel": 0.01,
+  "id": "g313"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bekasi pada September 2025?",
+  "kind": "number",
+  "expected": 87571200,
+  "rel": 0.02,
+  "id": "g314"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Minuman pada Oktober 2026?",
+  "kind": "number",
+  "expected": 6861,
+  "rel": 0.01,
+  "id": "g315"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Desember 2023?",
+  "kind": "number",
+  "expected": 45200,
+  "rel": 0.02,
+  "id": "g316"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in January 2025?",
+  "kind": "number",
+  "expected": 84257230,
+  "rel": 0.02,
+  "id": "g317"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Sembako category in April 2023?",
+  "kind": "number",
+  "expected": 9053,
+  "rel": 0.01,
+  "id": "g318"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Mi Instan Kuah Soto were sold in 2025?",
+  "kind": "number",
+  "expected": 30221,
+  "rel": 0.01,
+  "id": "g319"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Juli 2026?",
+  "kind": "number",
+  "expected": 143754690,
+  "rel": 0.02,
+  "id": "g320"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "en",
+  "question": "At which hour of the day did the Bekasi store have the most receipts in 2025?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g321"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Payung Lipat in June 2023?",
+  "kind": "number",
+  "expected": 270000,
+  "rel": 0.02,
+  "id": "g322"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Wafer Cokelat yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 4960,
+  "rel": 0.01,
+  "id": "g323"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bekasi pada Januari 2024?",
+  "kind": "number",
+  "expected": 77747900,
+  "rel": 0.02,
+  "id": "g324"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Roti Tawar yang dimulai tanggal 2023-07-31?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g325"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bogor pada September 2025?",
+  "kind": "number",
+  "expected": 56164500,
+  "rel": 0.02,
+  "id": "g326"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Kopi Sachet Renceng pada bulan September 2026?",
+  "kind": "number",
+  "expected": 9244300,
+  "rel": 0.02,
+  "id": "g327"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Alat Tulis category change in 2025 compared with 2024?",
+  "kind": "number",
+  "expected": 5.7,
+  "abs_tol": 0.6,
+  "id": "g328"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2023, produk apa yang paling sering dibeli bersama Sikat Gigi dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Pasta Gigi 190g"
+  ],
+  "id": "g329"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in January 2024?",
+  "kind": "number",
+  "expected": 77747900,
+  "rel": 0.02,
+  "id": "g330"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in January 2025?",
+  "kind": "number",
+  "expected": 1716,
+  "rel": 0.005,
+  "id": "g331"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Telur Ayam 1kg in November 2026?",
+  "kind": "number",
+  "expected": 695,
+  "rel": 0.03,
+  "id": "g332"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Popok Bayi M 20s untuk November 2026?",
+  "kind": "number",
+  "expected": 93,
+  "rel": 0.03,
+  "id": "g333"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Rumah Tangga pada tahun 2025 dibanding 2024?",
+  "kind": "number",
+  "expected": 2.5,
+  "abs_tol": 0.6,
+  "id": "g334"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Air Mineral 600ml were sold in 2024?",
+  "kind": "number",
+  "expected": 33631,
+  "rel": 0.01,
+  "id": "g335"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Minyak Goreng 2L in November 2026?",
+  "kind": "number",
+  "expected": 416,
+  "rel": 0.03,
+  "id": "g336"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Sikat Gigi yang terjual sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 1445,
+  "rel": 0.01,
+  "id": "g337"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Kesehatan category in March 2023?",
+  "kind": "number",
+  "expected": 363,
+  "rel": 0.01,
+  "id": "g338"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "id",
+  "question": "Jam berapa cabang Bekasi paling ramai (struk terbanyak) sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g339"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Roti & Sarapan category change in 2024 compared with 2023?",
+  "kind": "number",
+  "expected": 3.2,
+  "abs_tol": 0.6,
+  "id": "g340"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Popok Bayi M 20s in November 2026?",
+  "kind": "number",
+  "expected": 93,
+  "rel": 0.03,
+  "id": "g341"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Keripik Kentang 68g in April 2024?",
+  "kind": "number",
+  "expected": 4423200,
+  "rel": 0.02,
+  "id": "g342"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Minuman Isotonik 500ml in March 2025?",
+  "kind": "number",
+  "expected": 4803300,
+  "rel": 0.02,
+  "id": "g343"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Pasta Gigi 190g yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 2384,
+  "rel": 0.01,
+  "id": "g344"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in April 2026?",
+  "kind": "number",
+  "expected": 56153400,
+  "rel": 0.02,
+  "id": "g345"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Perawatan Diri, produk apa yang omzetnya paling besar pada tahun 2023?",
+  "kind": "name",
+  "expected": [
+   "Sabun Cair Refill 450ml"
+  ],
+  "id": "g346"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Popok Bayi M 20s yang dimulai tanggal 2024-10-26?",
+  "kind": "number",
+  "expected": 10,
+  "abs_tol": 0.5,
+  "id": "g347"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bogor pada November 2024?",
+  "kind": "number",
+  "expected": 50289330,
+  "rel": 0.02,
+  "id": "g348"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Bayi category change in 2024 compared with 2023?",
+  "kind": "number",
+  "expected": -0.4,
+  "abs_tol": 0.6,
+  "id": "g349"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Tisu Wajah 250s yang terjual sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 2402,
+  "rel": 0.01,
+  "id": "g350"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Roti & Sarapan category in September 2026?",
+  "kind": "number",
+  "expected": 507,
+  "rel": 0.01,
+  "id": "g351"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Teh Celup 25s yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 3248,
+  "rel": 0.01,
+  "id": "g352"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Cokelat Batang in November 2026?",
+  "kind": "number",
+  "expected": 179,
+  "rel": 0.03,
+  "id": "g353"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in November 2025?",
+  "kind": "number",
+  "expected": 50517,
+  "rel": 0.02,
+  "id": "g354"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in April 2025?",
+  "kind": "number",
+  "expected": 76440020,
+  "rel": 0.02,
+  "id": "g355"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Perawatan Diri category change in 2024 compared with 2023?",
+  "kind": "number",
+  "expected": 4.3,
+  "abs_tol": 0.6,
+  "id": "g356"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in August 2025?",
+  "kind": "number",
+  "expected": 50100,
+  "rel": 0.02,
+  "id": "g357"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "id",
+  "question": "Jam berapa cabang Depok paling ramai (struk terbanyak) sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g358"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in August 2024?",
+  "kind": "number",
+  "expected": 77948000,
+  "rel": 0.02,
+  "id": "g359"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2023, which product was most often bought together with Selai Cokelat on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g360"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in November 2024?",
+  "kind": "number",
+  "expected": 50289330,
+  "rel": 0.02,
+  "id": "g361"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in May 2023?",
+  "kind": "number",
+  "expected": 45465200,
+  "rel": 0.02,
+  "id": "g362"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Agustus 2026?",
+  "kind": "number",
+  "expected": 137895900,
+  "rel": 0.02,
+  "id": "g363"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Tepung Terigu 1kg were sold in 2023?",
+  "kind": "number",
+  "expected": 2242,
+  "rel": 0.01,
+  "id": "g364"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Maret 2023?",
+  "kind": "number",
+  "expected": 110125400,
+  "rel": 0.02,
+  "id": "g365"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bogor pada Januari 2026?",
+  "kind": "number",
+  "expected": 1175,
+  "rel": 0.005,
+  "id": "g366"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in February 2025?",
+  "kind": "number",
+  "expected": 50264,
+  "rel": 0.02,
+  "id": "g367"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Sembako category, which product had the highest revenue in 2024?",
+  "kind": "name",
+  "expected": [
+   "Beras Premium 5kg"
+  ],
+  "id": "g368"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Payung Lipat pada bulan Mei 2025?",
+  "kind": "number",
+  "expected": 389600,
+  "rel": 0.02,
+  "id": "g369"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Minuman category in July 2026?",
+  "kind": "number",
+  "expected": 7844,
+  "rel": 0.01,
+  "id": "g370"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Payung Lipat untuk November 2026?",
+  "kind": "number",
+  "expected": 29,
+  "rel": 0.03,
+  "id": "g371"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Rumah Tangga pada Maret 2024?",
+  "kind": "number",
+  "expected": 457,
+  "rel": 0.01,
+  "id": "g372"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Kopi Susu Botol 1L yang dimulai tanggal 2023-09-27?",
+  "kind": "number",
+  "expected": 20,
+  "abs_tol": 0.5,
+  "id": "g373"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Alat Tulis category in December 2024?",
+  "kind": "number",
+  "expected": 174,
+  "rel": 0.01,
+  "id": "g374"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Desember 2025?",
+  "kind": "number",
+  "expected": 51191,
+  "rel": 0.02,
+  "id": "g375"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in July 2025?",
+  "kind": "number",
+  "expected": 2536,
+  "rel": 0.005,
+  "id": "g376"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Sembako pada Mei 2023?",
+  "kind": "number",
+  "expected": 9473,
+  "rel": 0.01,
+  "id": "g377"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Deterjen Bubuk 800g promo that started on 2023-06-01?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g378"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada November 2024?",
+  "kind": "number",
+  "expected": 2406,
+  "rel": 0.005,
+  "id": "g379"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Kesehatan pada April 2025?",
+  "kind": "number",
+  "expected": 319,
+  "rel": 0.01,
+  "id": "g380"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Rumah Tangga category in October 2023?",
+  "kind": "number",
+  "expected": 420,
+  "rel": 0.01,
+  "id": "g381"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Cokelat Batang pada bulan Oktober 2026?",
+  "kind": "number",
+  "expected": 3413800,
+  "rel": 0.02,
+  "id": "g382"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Es Krim Cup in March 2026?",
+  "kind": "number",
+  "expected": 3464300,
+  "rel": 0.02,
+  "id": "g383"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Tisu Basah 50s untuk November 2026?",
+  "kind": "number",
+  "expected": 176,
+  "rel": 0.03,
+  "id": "g384"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Alat Tulis pada Juni 2023?",
+  "kind": "number",
+  "expected": 309,
+  "rel": 0.01,
+  "id": "g385"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Perawatan Diri pada April 2026?",
+  "kind": "number",
+  "expected": 1100,
+  "rel": 0.01,
+  "id": "g386"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in May 2026?",
+  "kind": "number",
+  "expected": 55206,
+  "rel": 0.02,
+  "id": "g387"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Perawatan Diri category in August 2024?",
+  "kind": "number",
+  "expected": 1253,
+  "rel": 0.01,
+  "id": "g388"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Telur Ayam 1kg were sold in 2023?",
+  "kind": "number",
+  "expected": 7804,
+  "rel": 0.01,
+  "id": "g389"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in February 2024?",
+  "kind": "number",
+  "expected": 1524,
+  "rel": 0.005,
+  "id": "g390"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2025, which product was most often bought together with Roti Tawar on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Selai Cokelat"
+  ],
+  "id": "g391"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Bayi category, which product had the highest revenue in 2024?",
+  "kind": "name",
+  "expected": [
+   "Popok Bayi M 20s"
+  ],
+  "id": "g392"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Bayi category, which product had the highest revenue in 2023?",
+  "kind": "name",
+  "expected": [
+   "Popok Bayi M 20s"
+  ],
+  "id": "g393"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Mi Pedas Korea were sold in 2025?",
+  "kind": "number",
+  "expected": 3995,
+  "rel": 0.01,
+  "id": "g394"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Sampo Sachet Renceng promo that started on 2024-12-03?",
+  "kind": "number",
+  "expected": 10,
+  "abs_tol": 0.5,
+  "id": "g395"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in July 2023?",
+  "kind": "number",
+  "expected": 49242650,
+  "rel": 0.02,
+  "id": "g396"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Susu UHT Cokelat 200ml in December 2024?",
+  "kind": "number",
+  "expected": 8388600,
+  "rel": 0.02,
+  "id": "g397"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bekasi pada April 2023?",
+  "kind": "number",
+  "expected": 73693250,
+  "rel": 0.02,
+  "id": "g398"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in May 2023?",
+  "kind": "number",
+  "expected": 72014700,
+  "rel": 0.02,
+  "id": "g399"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in December 2025?",
+  "kind": "number",
+  "expected": 51191,
+  "rel": 0.02,
+  "id": "g400"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Sembako pada Agustus 2026?",
+  "kind": "number",
+  "expected": 10011,
+  "rel": 0.01,
+  "id": "g401"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Mi Instan Kuah Soto in February 2025?",
+  "kind": "number",
+  "expected": 9522000,
+  "rel": 0.02,
+  "id": "g402"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Minuman category in December 2025?",
+  "kind": "number",
+  "expected": 6554,
+  "rel": 0.01,
+  "id": "g403"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Lain-lain category change in 2024 compared with 2023?",
+  "kind": "number",
+  "expected": -21.5,
+  "abs_tol": 0.6,
+  "id": "g404"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Susu Kental Manis 370g were sold in 2025?",
+  "kind": "number",
+  "expected": 4226,
+  "rel": 0.01,
+  "id": "g405"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Rumah Tangga pada Juni 2025?",
+  "kind": "number",
+  "expected": 394,
+  "rel": 0.01,
+  "id": "g406"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "en",
+  "question": "At which hour of the day did the Bekasi store have the most receipts in 2023?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g407"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Sabun Cair Refill 450ml promo that started on 2024-07-28?",
+  "kind": "number",
+  "expected": 20,
+  "abs_tol": 0.5,
+  "id": "g408"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in September 2025?",
+  "kind": "number",
+  "expected": 49739,
+  "rel": 0.02,
+  "id": "g409"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in August 2023?",
+  "kind": "number",
+  "expected": 2441,
+  "rel": 0.005,
+  "id": "g410"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Sembako, produk apa yang omzetnya paling besar pada tahun 2025?",
+  "kind": "name",
+  "expected": [
+   "Beras Premium 5kg"
+  ],
+  "id": "g411"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in April 2026?",
+  "kind": "number",
+  "expected": 54766,
+  "rel": 0.02,
+  "id": "g412"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Baterai AA (2) pada bulan April 2024?",
+  "kind": "number",
+  "expected": 561000,
+  "rel": 0.02,
+  "id": "g413"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "id",
+  "question": "Berapa persen struk di cabang Depok yang dibayar dengan QRIS pada tahun 2023?",
+  "kind": "number",
+  "expected": 14.3,
+  "abs_tol": 0.6,
+  "id": "g414"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Cokelat Batang yang terjual sepanjang tahun 2024?",
+  "kind": "number",
+  "expected": 2401,
+  "rel": 0.01,
+  "id": "g415"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Telur Ayam 1kg untuk November 2026?",
+  "kind": "number",
+  "expected": 695,
+  "rel": 0.03,
+  "id": "g416"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Selai Cokelat promo that started on 2026-05-19?",
+  "kind": "number",
+  "expected": 20,
+  "abs_tol": 0.5,
+  "id": "g417"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bogor store in June 2025?",
+  "kind": "number",
+  "expected": 54035700,
+  "rel": 0.02,
+  "id": "g418"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Depok store were paid with QRIS in 2025?",
+  "kind": "number",
+  "expected": 37.2,
+  "abs_tol": 0.6,
+  "id": "g419"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Minuman Isotonik 500ml in June 2024?",
+  "kind": "number",
+  "expected": 8392800,
+  "rel": 0.02,
+  "id": "g420"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Makanan Ringan, produk apa yang omzetnya paling besar pada tahun 2024?",
+  "kind": "name",
+  "expected": [
+   "Keripik Kentang 68g"
+  ],
+  "id": "g421"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Minuman Isotonik 500ml?",
+  "kind": "keywords",
+  "expected": [
+   "kemarau",
+   "dry"
+  ],
+  "season": "dry",
+  "id": "g422"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in August 2026?",
+  "kind": "number",
+  "expected": 137895900,
+  "rel": 0.02,
+  "id": "g423"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Mi Pedas Korea in November 2026?",
+  "kind": "number",
+  "expected": 993,
+  "rel": 0.03,
+  "id": "g424"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Payung Lipat were sold in 2023?",
+  "kind": "number",
+  "expected": 190,
+  "rel": 0.01,
+  "id": "g425"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Rumah Tangga category, which product had the highest revenue in 2024?",
+  "kind": "name",
+  "expected": [
+   "Deterjen Bubuk 800g"
+  ],
+  "id": "g426"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Es Krim Cup pada bulan Februari 2026?",
+  "kind": "number",
+  "expected": 3524900,
+  "rel": 0.02,
+  "id": "g427"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Rumah Tangga, produk apa yang omzetnya paling besar pada tahun 2023?",
+  "kind": "name",
+  "expected": [
+   "Deterjen Bubuk 800g"
+  ],
+  "id": "g428"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Roti Tawar were sold in 2024?",
+  "kind": "number",
+  "expected": 3642,
+  "rel": 0.01,
+  "id": "g429"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Susu Kental Manis 370g pada bulan Januari 2023?",
+  "kind": "number",
+  "expected": 4667000,
+  "rel": 0.02,
+  "id": "g430"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bekasi pada Juli 2025?",
+  "kind": "number",
+  "expected": 1779,
+  "rel": 0.005,
+  "id": "g431"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "en",
+  "question": "By what percentage did revenue of the Makanan Ringan category change in 2025 compared with 2024?",
+  "kind": "number",
+  "expected": 12.2,
+  "abs_tol": 0.6,
+  "id": "g432"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2025, produk apa yang paling sering dibeli bersama Kopi Sachet Renceng dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Gula Pasir 1kg"
+  ],
+  "id": "g433"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in March 2023?",
+  "kind": "number",
+  "expected": 1079,
+  "rel": 0.005,
+  "id": "g434"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Kesehatan pada Juli 2024?",
+  "kind": "number",
+  "expected": 319,
+  "rel": 0.01,
+  "id": "g435"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Tisu Basah 50s yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 1959,
+  "rel": 0.01,
+  "id": "g436"
+ },
+ {
+  "template": "busiest_hour",
+  "lang": "en",
+  "question": "At which hour of the day did the Bekasi store have the most receipts in 2024?",
+  "kind": "number",
+  "expected": 18,
+  "abs_tol": 0,
+  "id": "g437"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Lampu LED 9W promo that started on 2026-02-01?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g438"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "en",
+  "question": "What is the unit forecast for Susu Kental Manis 370g in November 2026?",
+  "kind": "number",
+  "expected": 393,
+  "rel": 0.03,
+  "id": "g439"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bogor pada Oktober 2024?",
+  "kind": "number",
+  "expected": 49531410,
+  "rel": 0.02,
+  "id": "g440"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Makanan Ringan pada tahun 2024 dibanding 2023?",
+  "kind": "number",
+  "expected": 3.0,
+  "abs_tol": 0.6,
+  "id": "g441"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Voucher Pulsa Fisik 10rb yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 2842,
+  "rel": 0.01,
+  "id": "g442"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bekasi store have in June 2024?",
+  "kind": "number",
+  "expected": 1662,
+  "rel": 0.005,
+  "id": "g443"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Depok pada Januari 2026?",
+  "kind": "number",
+  "expected": 135778050,
+  "rel": 0.02,
+  "id": "g444"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "id",
+  "question": "Di kategori Minuman, produk apa yang omzetnya paling besar pada tahun 2025?",
+  "kind": "name",
+  "expected": [
+   "Kopi Susu Botol 1L"
+  ],
+  "id": "g445"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Kecap Manis 520ml were sold in 2024?",
+  "kind": "number",
+  "expected": 1777,
+  "rel": 0.01,
+  "id": "g446"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "en",
+  "question": "What was the revenue of Baterai AA (2) in September 2025?",
+  "kind": "number",
+  "expected": 448500,
+  "rel": 0.02,
+  "id": "g447"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bogor pada Maret 2024?",
+  "kind": "number",
+  "expected": 1032,
+  "rel": 0.005,
+  "id": "g448"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in June 2025?",
+  "kind": "number",
+  "expected": 50122,
+  "rel": 0.02,
+  "id": "g449"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada Juli 2025?",
+  "kind": "number",
+  "expected": 2536,
+  "rel": 0.005,
+  "id": "g450"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Bogor store were paid with QRIS in 2024?",
+  "kind": "number",
+  "expected": 25.6,
+  "abs_tol": 0.6,
+  "id": "g451"
+ },
+ {
+  "template": "peak_season",
+  "lang": "en",
+  "question": "When is the peak season for Payung Lipat?",
+  "kind": "keywords",
+  "expected": [
+   "hujan",
+   "rainy",
+   "rain",
+   "penghujan"
+  ],
+  "season": "rainy",
+  "id": "g452"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Depok store have in March 2025?",
+  "kind": "number",
+  "expected": 2429,
+  "rel": 0.005,
+  "id": "g453"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada Mei 2023?",
+  "kind": "number",
+  "expected": 2226,
+  "rel": 0.005,
+  "id": "g454"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Roti Tawar yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 3610,
+  "rel": 0.01,
+  "id": "g455"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bekasi pada Januari 2025?",
+  "kind": "number",
+  "expected": 1716,
+  "rel": 0.005,
+  "id": "g456"
+ },
+ {
+  "template": "peak_season",
+  "lang": "id",
+  "question": "Kapan musim puncak penjualan Jas Hujan Plastik?",
+  "kind": "keywords",
+  "expected": [
+   "hujan",
+   "rainy",
+   "rain",
+   "penghujan"
+  ],
+  "season": "rainy",
+  "id": "g457"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2023, produk apa yang paling sering dibeli bersama Roti Tawar dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Selai Cokelat"
+  ],
+  "id": "g458"
+ },
+ {
+  "template": "category_growth_year",
+  "lang": "id",
+  "question": "Berapa persen pertumbuhan omzet kategori Lain-lain pada tahun 2024 dibanding 2023?",
+  "kind": "number",
+  "expected": -21.5,
+  "abs_tol": 0.6,
+  "id": "g459"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "en",
+  "question": "What was the discount percentage of the Roti Tawar promo that started on 2025-05-10?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g460"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Maret 2024?",
+  "kind": "number",
+  "expected": 50409,
+  "rel": 0.02,
+  "id": "g461"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bogor pada Juni 2024?",
+  "kind": "number",
+  "expected": 1074,
+  "rel": 0.005,
+  "id": "g462"
+ },
+ {
+  "template": "lebaran_day_receipts",
+  "lang": "id",
+  "question": "Berapa jumlah struk di semua cabang pada hari pertama Lebaran 2023?",
+  "kind": "number",
+  "expected": 66,
+  "rel": 0.005,
+  "id": "g463"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada Oktober 2026?",
+  "kind": "number",
+  "expected": 2577,
+  "rel": 0.005,
+  "id": "g464"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Juli 2024?",
+  "kind": "number",
+  "expected": 47190,
+  "rel": 0.02,
+  "id": "g465"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Sembako category in September 2024?",
+  "kind": "number",
+  "expected": 9159,
+  "rel": 0.01,
+  "id": "g466"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Minuman category in September 2026?",
+  "kind": "number",
+  "expected": 7501,
+  "rel": 0.01,
+  "id": "g467"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in October 2023?",
+  "kind": "number",
+  "expected": 103480400,
+  "rel": 0.02,
+  "id": "g468"
+ },
+ {
+  "template": "forecast_next_month",
+  "lang": "id",
+  "question": "Berapa forecast unit Teh Celup 25s untuk November 2026?",
+  "kind": "number",
+  "expected": 282,
+  "rel": 0.03,
+  "id": "g469"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "en",
+  "question": "What was the average receipt value across all stores in October 2024?",
+  "kind": "number",
+  "expected": 48899,
+  "rel": 0.02,
+  "id": "g470"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in December 2025?",
+  "kind": "number",
+  "expected": 1117,
+  "rel": 0.005,
+  "id": "g471"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Perawatan Diri category in June 2025?",
+  "kind": "number",
+  "expected": 1089,
+  "rel": 0.01,
+  "id": "g472"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Bekasi store in September 2025?",
+  "kind": "number",
+  "expected": 87571200,
+  "rel": 0.02,
+  "id": "g473"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Minuman Soda 1.5L yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 3146,
+  "rel": 0.01,
+  "id": "g474"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Popok Bayi M 20s were sold in 2025?",
+  "kind": "number",
+  "expected": 1315,
+  "rel": 0.01,
+  "id": "g475"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "en",
+  "question": "How many receipts (transactions) did the Bogor store have in August 2025?",
+  "kind": "number",
+  "expected": 1171,
+  "rel": 0.005,
+  "id": "g476"
+ },
+ {
+  "template": "top_product_in_category",
+  "lang": "en",
+  "question": "In the Roti & Sarapan category, which product had the highest revenue in 2025?",
+  "kind": "name",
+  "expected": [
+   "Roti Tawar"
+  ],
+  "id": "g477"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Tisu Wajah 250s pada bulan Agustus 2025?",
+  "kind": "number",
+  "expected": 3382400,
+  "rel": 0.02,
+  "id": "g478"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada Mei 2023?",
+  "kind": "number",
+  "expected": 45142,
+  "rel": 0.02,
+  "id": "g479"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Santan Kemasan 200ml yang terjual sepanjang tahun 2023?",
+  "kind": "number",
+  "expected": 2928,
+  "rel": 0.01,
+  "id": "g480"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Tisu Wajah 250s were sold in 2025?",
+  "kind": "number",
+  "expected": 2360,
+  "rel": 0.01,
+  "id": "g481"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Deterjen Bubuk 800g were sold in 2025?",
+  "kind": "number",
+  "expected": 2653,
+  "rel": 0.01,
+  "id": "g482"
+ },
+ {
+  "template": "qris_share_store_year",
+  "lang": "en",
+  "question": "What percentage of receipts at the Bekasi store were paid with QRIS in 2023?",
+  "kind": "number",
+  "expected": 13.7,
+  "abs_tol": 0.6,
+  "id": "g483"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "id",
+  "question": "Berapa total unit terjual untuk kategori Kesehatan pada Juli 2023?",
+  "kind": "number",
+  "expected": 342,
+  "rel": 0.01,
+  "id": "g484"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada April 2024?",
+  "kind": "number",
+  "expected": 49082,
+  "rel": 0.02,
+  "id": "g485"
+ },
+ {
+  "template": "bought_together",
+  "lang": "en",
+  "question": "In 2024, which product was most often bought together with Popok Bayi M 20s on the same receipt?",
+  "kind": "name",
+  "expected": [
+   "Tisu Basah 50s"
+  ],
+  "id": "g486"
+ },
+ {
+  "template": "units_category_month",
+  "lang": "en",
+  "question": "How many units were sold in the Bayi category in December 2024?",
+  "kind": "number",
+  "expected": 264,
+  "rel": 0.01,
+  "id": "g487"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Bogor pada September 2026?",
+  "kind": "number",
+  "expected": 1142,
+  "rel": 0.005,
+  "id": "g488"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "id",
+  "question": "Berapa total omzet cabang Bogor pada Juni 2026?",
+  "kind": "number",
+  "expected": 59941460,
+  "rel": 0.02,
+  "id": "g489"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Wafer Stik Keju were sold in 2024?",
+  "kind": "number",
+  "expected": 2002,
+  "rel": 0.01,
+  "id": "g490"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "id",
+  "question": "Berapa unit Beras Premium 5kg yang terjual sepanjang tahun 2025?",
+  "kind": "number",
+  "expected": 4440,
+  "rel": 0.01,
+  "id": "g491"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Selai Cokelat were sold in 2025?",
+  "kind": "number",
+  "expected": 2069,
+  "rel": 0.01,
+  "id": "g492"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Tepung Terigu 1kg were sold in 2025?",
+  "kind": "number",
+  "expected": 2286,
+  "rel": 0.01,
+  "id": "g493"
+ },
+ {
+  "template": "revenue_product_month",
+  "lang": "id",
+  "question": "Berapa omzet Cokelat Batang pada bulan Februari 2023?",
+  "kind": "number",
+  "expected": 3015000,
+  "rel": 0.02,
+  "id": "g494"
+ },
+ {
+  "template": "store_revenue_month",
+  "lang": "en",
+  "question": "What was the total revenue of the Depok store in April 2024?",
+  "kind": "number",
+  "expected": 103165550,
+  "rel": 0.02,
+  "id": "g495"
+ },
+ {
+  "template": "receipts_store_month",
+  "lang": "id",
+  "question": "Berapa jumlah struk (transaksi) di cabang Depok pada September 2023?",
+  "kind": "number",
+  "expected": 2312,
+  "rel": 0.005,
+  "id": "g496"
+ },
+ {
+  "template": "avg_receipt_month",
+  "lang": "id",
+  "question": "Berapa rata-rata nilai belanja per struk (semua cabang) pada November 2024?",
+  "kind": "number",
+  "expected": 47072,
+  "rel": 0.02,
+  "id": "g497"
+ },
+ {
+  "template": "units_product_year",
+  "lang": "en",
+  "question": "How many units of Minuman Soda 1.5L were sold in 2023?",
+  "kind": "number",
+  "expected": 3070,
+  "rel": 0.01,
+  "id": "g498"
+ },
+ {
+  "template": "promo_discount",
+  "lang": "id",
+  "question": "Berapa persen diskon promo Kopi Susu Botol 1L yang dimulai tanggal 2025-06-22?",
+  "kind": "number",
+  "expected": 15,
+  "abs_tol": 0.5,
+  "id": "g499"
+ },
+ {
+  "template": "bought_together",
+  "lang": "id",
+  "question": "Pada tahun 2024, produk apa yang paling sering dibeli bersama Sikat Gigi dalam satu struk?",
+  "kind": "name",
+  "expected": [
+   "Pasta Gigi 190g"
+  ],
+  "id": "g500"
+ }
+]

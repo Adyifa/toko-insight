@@ -9,6 +9,12 @@ SQL that produced it.
 
 > Bahasa Indonesia: [README.id.md](README.id.md)
 
+![Dashboard: KPIs, monthly revenue, Pareto and category growth](docs/dashboard.jpg)
+
+| Forecast with the Lebaran adjustment | Restock plan with reasons |
+|---|---|
+| ![Sirup Melon forecast: the Ramadan peak moves from March 2025 to Feb-Mar 2026 to February 2027; backtest WAPE 8.5% vs 20.1% for seasonal-naive](docs/forecast.jpg) | ![Restock plan: order now, prepare for peak, reduce, with safety stock and reorder point](docs/restock.jpg) |
+
 Why a separate project from a RAG app: RAG retrieves text. Questions like "which product grew
 fastest", "what sells together" or "how much Sirup will we sell in February" need **computation
 over tables**: aggregation, statistics and forecasting. This project does that with tool calling,
@@ -42,7 +48,8 @@ py -m pytest                        # 79 tests, fake LLM, no key needed
 ```
 
 For the chat, copy `.env.example` to `.env` and set `GEMINI_API_KEY` (a free key from
-<https://aistudio.google.com/apikey>):
+<https://aistudio.google.com/apikey>). `TOKO_MODEL` picks the model (default `gemini-3.8-flash`);
+`gemini-3.5-flash-lite` is the fastest and the one used for the evals:
 
 ```powershell
 py -m tokoinsight ask "Produk apa saja yang musiman saat Ramadan dan menjelang Lebaran?"
@@ -147,16 +154,35 @@ Offline results on the default dataset ([evals/reports/offline.md](evals/reports
 On Ramadan products the Lebaran adjustment halves the error. It beats seasonal-naive on 28 of
 44 products. For flat, non-seasonal products, the models are close.
 
-The **agent** suite ([evals/questions.json](evals/questions.json)) has 14 questions in Indonesian
-and English. Each has expected content (e.g. "Kurma", "Sirup", "Biskuit Kaleng" for Ramadan) and
-expected tools. It needs a Gemini key: `py -m tokoinsight eval --suite agent`. Its results are
-saved to `evals/results/`. *I have not yet run it against the live API, so there is no agent
-score here yet.*
+**Agent, live on Gemini** (`gemini-3.5-flash-lite`, free tier):
+
+- **Hand-written suite: 13/14.** The 14 questions in [evals/questions.json](evals/questions.json)
+  (Indonesian and English) each have expected content (e.g. "Kurma", "Sirup", "Biskuit Kaleng"
+  for Ramadan) and expected tools. All 14 picked the right tools. The one miss ran out of steps
+  with no text; the agent now asks once more for an answer without tools.
+- **Generated suite: 273 of 279 correct (97.8%).** [evalgen.py](tokoinsight/evalgen.py) builds
+  500 questions from 15 templates, with exact answers computed by SQL (units, revenue, receipts,
+  average basket, QRIS share, top product in a category, pairs, peak season, growth, forecast,
+  busiest hour, Lebaran day, promos). The free tier allows 500 requests a day, so the run stopped
+  at 279; it resumes where it left off. Indonesian 98.6%, English 97.1%. 97.1% of answers are
+  *grounded*: the expected number appears in a tool result, not only in the text. 12 of the 15
+  templates scored 100%. Average 2.3 tool calls and 28 s per question.
+
+| template | correct | what went wrong |
+|---|---|---|
+| QRIS share by store and year | 9/13 | guessed the `payment_method` values in SQL |
+| receipts on the first day of Lebaran | 6/7 | counted another date (144 instead of 58) |
+| store revenue in a month | 24/25 | reported Rp 3.8 billion instead of Rp 94 million |
+| the other 12 templates | 245/245 | |
+
+After the run I added the `payment_method` values to the schema the model sees. That fix has not
+been measured yet.
 
 ```powershell
 py -m tokoinsight eval --suite analytics
 py -m tokoinsight eval --suite forecast
-py -m tokoinsight eval --suite agent      # needs GEMINI_API_KEY; ~14 questions, paced for the free tier
+py -m tokoinsight eval --suite agent      # needs GEMINI_API_KEY; 14 questions, paced for the free tier
+py -m tokoinsight eval --suite agent500   # 500 generated questions; resumable, stops cleanly when the daily quota runs out
 ```
 
 ## Safety

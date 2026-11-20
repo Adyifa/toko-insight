@@ -15,7 +15,7 @@ from collections.abc import Callable
 from dataclasses import dataclass, field
 
 BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
-RETRY_STATUSES = {429, 500, 502, 503, 504}
+RETRY_STATUSES = {429, 500, 502, 503, 504, 599}  # 599 = timeout / network error (see urllib_transport)
 
 # transport(url, headers, body) -> (status, response body)
 Transport = Callable[[str, dict, bytes], tuple[int, bytes]]
@@ -50,28 +50,42 @@ def urllib_transport(timeout: float) -> Transport:
                 return response.status, response.read()
         except urllib.error.HTTPError as error:
             return error.code, error.read()
+        except (TimeoutError, urllib.error.URLError, ConnectionError) as error:
+            # Network trouble or a slow, overloaded model: report as a retryable status.
+            return 599, json.dumps({"error": {"message": f"network error: {error}"}}).encode()
 
     return send
 
 
-def retry_delay(body: dict, attempt: int) -> float:
-    """Seconds to wait: the API's RetryInfo.retryDelay ("31s") when present, else 2, 4, 8, ... s."""
+MAX_WAIT = 120.0  # a longer requested wait means a daily quota is used up: stop instead of retrying
+
+
+def requested_delay(body: dict) -> float | None:
+    """The API's RetryInfo.retryDelay ("31s") in seconds, if present."""
     for detail in body.get("error", {}).get("details", []) or []:
         delay = detail.get("retryDelay")
         if isinstance(delay, str) and (match := re.fullmatch(r"(\d+(?:\.\d+)?)s", delay)):
-            return min(float(match.group(1)) + 0.5, 90.0)
+            return float(match.group(1))
+    return None
+
+
+def retry_delay(body: dict, attempt: int) -> float:
+    """Seconds to wait: the API's retryDelay when present, else 2, 4, 8, ... s."""
+    requested = requested_delay(body)
+    if requested is not None:
+        return min(requested + 0.5, 90.0)
     return min(2.0 ** (attempt + 1), 30.0)
 
 
 @dataclass
 class GeminiClient:
     api_key: str
-    model: str = "gemini-2.5-flash"
-    thinking_budget: int | None = 0  # 0 turns off "thinking" on 2.5 Flash: faster and cheaper
+    model: str = "gemini-3.8-flash"
+    thinking_budget: int | None = None  # None = the model default; 0 turns thinking off on 2.5 models
     temperature: float = 0.1
     max_tokens: int = 4096
     max_retries: int = 5
-    timeout: float = 90.0
+    timeout: float = 120.0
     transport: Transport | None = None
     sleep: Callable[[float], None] = time.sleep
     usage: Usage = field(default_factory=Usage)
@@ -100,6 +114,9 @@ class GeminiClient:
             message = data.get("error", {}).get("message") or raw[:200].decode(errors="replace")
             if status not in RETRY_STATUSES or attempt == self.max_retries:
                 raise GeminiError(f"Gemini API error {status}: {message}", status)
+            if status == 429 and (requested_delay(data) or 0) > MAX_WAIT:
+                raise GeminiError(f"Gemini API error 429 (quota exhausted, retry in "
+                                  f"{requested_delay(data) / 3600:.1f} h): {message}", status)
             self.sleep(retry_delay(data, attempt))
         raise AssertionError("unreachable")
 

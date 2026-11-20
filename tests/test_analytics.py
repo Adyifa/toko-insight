@@ -64,3 +64,13 @@ def test_bad_arguments(db):
         analytics.sales_trend(db, start="2025-13-01")
     with pytest.raises(AnalyticsError):
         analytics.growth(db, store="Jakarta Pusat")
+
+
+def test_category_names_are_forgiving(db):
+    from tokoinsight.analytics import resolve_category
+
+    assert resolve_category(db, "roti") == "Roti & Sarapan"
+    assert resolve_category(db, "SEMBAKO") == "Sembako"
+    assert analytics.list_products(db, category="roti")["products"][0]["category"] == "Roti & Sarapan"
+    with pytest.raises(AnalyticsError, match="Categories"):
+        resolve_category(db, "elektronik")

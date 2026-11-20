@@ -23,11 +23,11 @@ def test_function_call_request_and_response():
                              tools=[{"name": "top_products", "description": "d"}])
     assert result == content
     url, headers, payload = sent[0]
-    assert url.endswith("models/gemini-2.5-flash:generateContent") and headers["x-goog-api-key"] == "test"
+    assert url.endswith("models/gemini-3.8-flash:generateContent") and headers["x-goog-api-key"] == "test"
     assert payload["tools"][0]["functionDeclarations"][0]["name"] == "top_products"
     assert payload["toolConfig"]["functionCallingConfig"]["mode"] == "AUTO"
     assert payload["systemInstruction"]["parts"][0]["text"] == "sys"
-    assert payload["generationConfig"]["thinkingConfig"]["thinkingBudget"] == 0
+    assert "thinkingConfig" not in payload["generationConfig"]  # model default unless configured
     assert client.usage.calls == 1 and client.usage.input_tokens == 10
 
 
@@ -49,3 +49,11 @@ def test_errors():
         client.generate([])
     with pytest.raises(GeminiError, match="GEMINI_API_KEY"):
         GeminiClient(api_key="")
+
+
+def test_daily_quota_stops_without_waiting():
+    exhausted = {"error": {"message": "Quota exceeded per day", "details": [{"retryDelay": "68383s"}]}}
+    client, sent = make([(429, exhausted)])
+    with pytest.raises(GeminiError, match="quota exhausted"):
+        client.generate([])
+    assert len(sent) == 1

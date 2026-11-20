@@ -69,6 +69,7 @@ Tables (SQLite, dates are 'YYYY-MM-DD' text, money in Rupiah):
 - stores(store_id, name, city)
 - products(product_id, sku, name, category, unit_price, unit_cost, lead_time_days, launched_on, discontinued_on)
 - transactions(txn_id, store_id, date, time, payment_method)  -- one row per receipt (basket)
+  payment_method is lowercase: 'cash', 'qris' or 'debit'
 - transaction_items(txn_id, product_id, qty, unit_price, discount, revenue, promo_id)  -- receipt lines
 - promos(promo_id, product_id, name, start_date, end_date, discount_pct)
 - inventory(store_id, product_id, on_hand, as_of)  -- current stock on hand

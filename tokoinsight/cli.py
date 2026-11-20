@@ -42,8 +42,8 @@ def make_llm():
     budget = os.environ.get("TOKO_THINKING_BUDGET")
     try:
         return GeminiClient(api_key=os.environ.get("GEMINI_API_KEY", ""),
-                            model=os.environ.get("TOKO_MODEL", "gemini-2.5-flash"),
-                            thinking_budget=int(budget) if budget not in (None, "") else 0)
+                            model=os.environ.get("TOKO_MODEL", "gemini-3.8-flash"),
+                            thinking_budget=int(budget) if budget not in (None, "") else None)
     except GeminiError as exc:
         sys.exit(str(exc))
 
@@ -307,13 +307,35 @@ def cmd_eval(args) -> None:
             report = evals.analytics_suite(db)
         elif suite == "forecast":
             report = evals.forecast_suite(db)
-        else:
+        else:  # agent / agent500 need the LLM
             if not os.environ.get("GEMINI_API_KEY"):
                 print("Skipping agent suite: GEMINI_API_KEY is not set.")
+                continue
+            if suite == "agent500":
+                _run_agent500(db, args)
                 continue
             report = evals.agent_suite(make_agent(db), limit=args.limit, pause=args.pause)
         print(evals.to_markdown(report))
         print(f"\nSaved {evals.save(report)}\n")
+
+
+def _run_agent500(db, args) -> None:
+    """500 generated questions with exact answers; resumable (results appended to a JSONL file)."""
+    from . import evalgen
+
+    path = ROOT / "evals" / "questions_500.json"
+    if not path.exists():
+        items = evalgen.build_questions(db, n=500)
+        path.write_text(json.dumps(items, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"Wrote {len(items)} questions to {path}")
+    items = json.loads(path.read_text(encoding="utf-8"))
+    model = os.environ.get("TOKO_MODEL", "gemini-3.8-flash")
+    out = ROOT / "evals" / "results" / f"agent500-{model}.jsonl"
+    results = evalgen.run(make_agent(db), items, out, pause=args.pause, limit=args.limit)
+    summary = evalgen.summarize(results)
+    summary["model"] = model
+    (out.with_suffix(".summary.json")).write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(json.dumps(summary, indent=2, ensure_ascii=False))
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -371,7 +393,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_serve)
 
     p = sub.add_parser("eval", help="run evaluation suites")
-    p.add_argument("--suite", default="all", choices=["analytics", "forecast", "agent", "all"])
+    p.add_argument("--suite", default="all", choices=["analytics", "forecast", "agent", "agent500", "all"])
     p.add_argument("--limit", type=int, help="agent suite: only the first N questions")
     p.add_argument("--pause", type=float, default=4.0, help="agent suite: seconds between questions (rate limit)")
     p.set_defaults(func=cmd_eval)

@@ -72,12 +72,23 @@ def _where(db: Database, start: date, end: date, store: str | None = None, categ
         clauses.append("d.store_id = ?")
         params.append(sid[0])
     if category:
-        clauses.append("lower(p.category) = lower(?)")
-        params.append(category)
+        clauses.append("p.category = ?")
+        params.append(resolve_category(db, category))
     if product:
         clauses.append("d.product_id = ?")
         params.append(resolve_product(db, product)[0])
     return " AND ".join(clauses), params
+
+
+def resolve_category(db: Database, text: str) -> str:
+    """Exact category name from a case-insensitive name or a unique part of it ("roti" -> "Roti & Sarapan")."""
+    categories = [r[0] for r in db.conn.execute("SELECT DISTINCT category FROM products WHERE category IS NOT NULL")]
+    wanted = str(text).strip().lower()
+    exact = [c for c in categories if c.lower() == wanted]
+    partial = exact or [c for c in categories if wanted in c.lower()]
+    if len(partial) == 1:
+        return partial[0]
+    raise AnalyticsError(f"Unknown or ambiguous category {text!r}. Categories: {sorted(categories)}")
 
 
 def _pct(new: float, old: float) -> float | None:
@@ -95,8 +106,8 @@ def list_products(db: Database, category: str | None = None) -> dict:
            "MAX(d.date) AS last_sale FROM products p LEFT JOIN daily_sales d ON d.product_id = p.product_id")
     params: list = []
     if category:
-        sql += " WHERE lower(p.category) = lower(?)"
-        params.append(category)
+        sql += " WHERE p.category = ?"
+        params.append(resolve_category(db, category))
     rows = db.rows(sql + " GROUP BY p.product_id ORDER BY p.category, p.name", params)
     stores = db.rows("SELECT store_id, name, city FROM stores")
     return {"as_of": db.as_of().isoformat(), "first_date": db.first_date().isoformat(), "stores": stores,
@@ -325,8 +336,8 @@ def _daily_matrix(db: Database, category: str | None = None, store: str | None =
     days = (last - first).days + 1
     clauses, params = ["1=1"], []
     if category:
-        clauses.append("lower(p.category) = lower(?)")
-        params.append(category)
+        clauses.append("p.category = ?")
+        params.append(resolve_category(db, category))
     if store:
         clauses.append("d.store_id = (SELECT store_id FROM stores WHERE lower(store_id)=lower(?) OR city LIKE ?)")
         params += [store, f"%{store}%"]
